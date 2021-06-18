@@ -1,0 +1,289 @@
+﻿using System.ComponentModel;
+
+namespace ProyectoFinal
+{
+    partial class ForgotPassword
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.GroupBox = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.TxtPasswordFP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtUsernameFP = new System.Windows.Forms.TextBox();
+            this.TxtDuiFP = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.GroupBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BtnBack, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 5, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.39286F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.27679F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.803571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.30357F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 448);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // GroupBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.GroupBox, 4);
+            this.GroupBox.Controls.Add(this.TxtDuiFP);
+            this.GroupBox.Controls.Add(this.TxtUsernameFP);
+            this.GroupBox.Controls.Add(this.label6);
+            this.GroupBox.Controls.Add(this.BtnSearch);
+            this.GroupBox.Controls.Add(this.TxtPasswordFP);
+            this.GroupBox.Controls.Add(this.label5);
+            this.GroupBox.Controls.Add(this.label4);
+            this.GroupBox.Controls.Add(this.label3);
+            this.GroupBox.Controls.Add(this.label2);
+            this.GroupBox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.GroupBox.ForeColor = System.Drawing.Color.White;
+            this.GroupBox.Location = new System.Drawing.Point(136, 144);
+            this.GroupBox.Name = "GroupBox";
+            this.tableLayoutPanel1.SetRowSpan(this.GroupBox, 4);
+            this.GroupBox.Size = new System.Drawing.Size(526, 218);
+            this.GroupBox.TabIndex = 2;
+            this.GroupBox.TabStop = false;
+            this.GroupBox.Text = "User";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Location = new System.Drawing.Point(389, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 32);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Search";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnSearch.BackgroundImage")));
+            this.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSearch.FlatAppearance.BorderSize = 0;
+            this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSearch.Location = new System.Drawing.Point(388, 51);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(110, 54);
+            this.BtnSearch.TabIndex = 7;
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // TxtPasswordFP
+            // 
+            this.TxtPasswordFP.Location = new System.Drawing.Point(185, 162);
+            this.TxtPasswordFP.Multiline = true;
+            this.TxtPasswordFP.Name = "TxtPasswordFP";
+            this.TxtPasswordFP.ReadOnly = true;
+            this.TxtPasswordFP.Size = new System.Drawing.Size(168, 30);
+            this.TxtPasswordFP.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Location = new System.Drawing.Point(70, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 32);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Password :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Location = new System.Drawing.Point(0, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(526, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "- - - - - - - - - - - - - - - - - - o - - - - - - - - - - - - - - - - - -\r\n ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Location = new System.Drawing.Point(70, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 32);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Username :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Location = new System.Drawing.Point(128, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "DUI : ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.label1, 4);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(136, 0);
+            this.label1.Name = "label1";
+            this.tableLayoutPanel1.SetRowSpan(this.label1, 2);
+            this.label1.Size = new System.Drawing.Size(526, 115);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Forgot Password";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnBack.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnBack.BackgroundImage")));
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(3, 25);
+            this.BtnBack.Name = "BtnBack";
+            this.tableLayoutPanel1.SetRowSpan(this.BtnBack, 2);
+            this.BtnBack.Size = new System.Drawing.Size(127, 65);
+            this.BtnBack.TabIndex = 0;
+            this.BtnBack.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(668, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // TxtUsernameFP
+            // 
+            this.TxtUsernameFP.Location = new System.Drawing.Point(185, 53);
+            this.TxtUsernameFP.Multiline = true;
+            this.TxtUsernameFP.Name = "TxtUsernameFP";
+            this.TxtUsernameFP.ReadOnly = true;
+            this.TxtUsernameFP.Size = new System.Drawing.Size(168, 30);
+            this.TxtUsernameFP.TabIndex = 9;
+            // 
+            // TxtDuiFP
+            // 
+            this.TxtDuiFP.Location = new System.Drawing.Point(185, 91);
+            this.TxtDuiFP.Multiline = true;
+            this.TxtDuiFP.Name = "TxtDuiFP";
+            this.TxtDuiFP.ReadOnly = true;
+            this.TxtDuiFP.Size = new System.Drawing.Size(168, 30);
+            this.TxtDuiFP.TabIndex = 10;
+            // 
+            // ForgotPassword
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.ClientSize = new System.Drawing.Size(800, 402);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Name = "ForgotPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ForgotPassword";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.GroupBox.ResumeLayout(false);
+            this.GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+        }
+
+        private System.Windows.Forms.TextBox TxtUsernameFP;
+        private System.Windows.Forms.TextBox TxtDuiFP;
+
+        private System.Windows.Forms.TextBox TxtPasswordFP;
+        private System.Windows.Forms.Button BtnSearch;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+
+        private System.Windows.Forms.Label label6;
+
+        private System.Windows.Forms.Button button1;
+
+        private System.Windows.Forms.TextBox textBox3;
+
+        private System.Windows.Forms.Label label5;
+
+        private System.Windows.Forms.Label label4;
+
+        private System.Windows.Forms.TextBox textBox2;
+
+        private System.Windows.Forms.Label label3;
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+
+        private System.Windows.Forms.GroupBox GroupBox;
+
+        private System.Windows.Forms.GroupBox groupBox1;
+
+        private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.Button BtnBack;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+
+        #endregion
+    }
+}
