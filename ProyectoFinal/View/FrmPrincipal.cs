@@ -2,9 +2,9 @@
 
 namespace ProyectoFinal
 {
-    public partial class CreaterUser : Form
+    public partial class FrmPrincipal : Form
     {
-        public CreaterUser()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }

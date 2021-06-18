@@ -2,7 +2,7 @@
 
 namespace ProyectoFinal
 {
-    partial class CreaterUser
+    partial class FrmCreaterUser
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace ProyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreaterUser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreaterUser));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@ namespace ProyectoFinal
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.groupBox.SuspendLayout();
@@ -144,6 +145,7 @@ namespace ProyectoFinal
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox, 6);
+            this.groupBox.Controls.Add(this.button2);
             this.groupBox.Controls.Add(this.richTextBox1);
             this.groupBox.Controls.Add(this.textBox6);
             this.groupBox.Controls.Add(this.textBox5);
@@ -299,6 +301,16 @@ namespace ProyectoFinal
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(670, 115);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 69);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // CreaterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,7 +318,7 @@ namespace ProyectoFinal
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CreaterUser";
+            this.Name = "FrmCreaterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreaterUser";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -315,6 +327,8 @@ namespace ProyectoFinal
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Label label9;
 

@@ -2,7 +2,7 @@
 
 namespace ProyectoFinal
 {
-    partial class ForgotPassword
+    partial class FrmForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,10 @@ namespace ProyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForgotPassword));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBox = new System.Windows.Forms.GroupBox();
+            this.TxtUsernameFP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.TxtPasswordFP = new System.Windows.Forms.TextBox();
@@ -44,8 +45,6 @@ namespace ProyectoFinal
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtUsernameFP = new System.Windows.Forms.TextBox();
-            this.TxtDuiFP = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -75,13 +74,12 @@ namespace ProyectoFinal
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 448);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 449);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // GroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.GroupBox, 4);
-            this.GroupBox.Controls.Add(this.TxtDuiFP);
             this.GroupBox.Controls.Add(this.TxtUsernameFP);
             this.GroupBox.Controls.Add(this.label6);
             this.GroupBox.Controls.Add(this.BtnSearch);
@@ -95,15 +93,23 @@ namespace ProyectoFinal
             this.GroupBox.Location = new System.Drawing.Point(136, 144);
             this.GroupBox.Name = "GroupBox";
             this.tableLayoutPanel1.SetRowSpan(this.GroupBox, 4);
-            this.GroupBox.Size = new System.Drawing.Size(526, 218);
+            this.GroupBox.Size = new System.Drawing.Size(526, 235);
             this.GroupBox.TabIndex = 2;
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "User";
             // 
+            // TxtUsernameFP
+            // 
+            this.TxtUsernameFP.Location = new System.Drawing.Point(185, 53);
+            this.TxtUsernameFP.Multiline = true;
+            this.TxtUsernameFP.Name = "TxtUsernameFP";
+            this.TxtUsernameFP.Size = new System.Drawing.Size(168, 30);
+            this.TxtUsernameFP.TabIndex = 9;
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(389, 106);
+            this.label6.Location = new System.Drawing.Point(388, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 32);
             this.label6.TabIndex = 8;
@@ -116,7 +122,7 @@ namespace ProyectoFinal
             this.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnSearch.FlatAppearance.BorderSize = 0;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearch.Location = new System.Drawing.Point(388, 51);
+            this.BtnSearch.Location = new System.Drawing.Point(388, 29);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(110, 54);
             this.BtnSearch.TabIndex = 7;
@@ -125,7 +131,7 @@ namespace ProyectoFinal
             // 
             // TxtPasswordFP
             // 
-            this.TxtPasswordFP.Location = new System.Drawing.Point(185, 162);
+            this.TxtPasswordFP.Location = new System.Drawing.Point(185, 186);
             this.TxtPasswordFP.Multiline = true;
             this.TxtPasswordFP.Name = "TxtPasswordFP";
             this.TxtPasswordFP.ReadOnly = true;
@@ -135,7 +141,7 @@ namespace ProyectoFinal
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(70, 162);
+            this.label5.Location = new System.Drawing.Point(70, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 32);
             this.label5.TabIndex = 5;
@@ -146,7 +152,7 @@ namespace ProyectoFinal
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Location = new System.Drawing.Point(0, 138);
+            this.label4.Location = new System.Drawing.Point(29, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(526, 24);
             this.label4.TabIndex = 4;
@@ -156,7 +162,7 @@ namespace ProyectoFinal
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Location = new System.Drawing.Point(70, 51);
+            this.label3.Location = new System.Drawing.Point(70, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 32);
             this.label3.TabIndex = 2;
@@ -166,11 +172,11 @@ namespace ProyectoFinal
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Location = new System.Drawing.Point(128, 89);
+            this.label2.Location = new System.Drawing.Point(70, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 32);
+            this.label2.Size = new System.Drawing.Size(174, 32);
             this.label2.TabIndex = 0;
-            this.label2.Text = "DUI : ";
+            this.label2.Text = "Su contraseña es :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -201,6 +207,7 @@ namespace ProyectoFinal
             this.BtnBack.Size = new System.Drawing.Size(127, 65);
             this.BtnBack.TabIndex = 0;
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // pictureBox1
             // 
@@ -214,32 +221,16 @@ namespace ProyectoFinal
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // TxtUsernameFP
-            // 
-            this.TxtUsernameFP.Location = new System.Drawing.Point(185, 53);
-            this.TxtUsernameFP.Multiline = true;
-            this.TxtUsernameFP.Name = "TxtUsernameFP";
-            this.TxtUsernameFP.ReadOnly = true;
-            this.TxtUsernameFP.Size = new System.Drawing.Size(168, 30);
-            this.TxtUsernameFP.TabIndex = 9;
-            // 
-            // TxtDuiFP
-            // 
-            this.TxtDuiFP.Location = new System.Drawing.Point(185, 91);
-            this.TxtDuiFP.Multiline = true;
-            this.TxtDuiFP.Name = "TxtDuiFP";
-            this.TxtDuiFP.ReadOnly = true;
-            this.TxtDuiFP.Size = new System.Drawing.Size(168, 30);
-            this.TxtDuiFP.TabIndex = 10;
-            // 
-            // ForgotPassword
+            // FrmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
-            this.ClientSize = new System.Drawing.Size(800, 402);
+            this.ClientSize = new System.Drawing.Size(805, 423);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "ForgotPassword";
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "FrmForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPassword";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -250,7 +241,6 @@ namespace ProyectoFinal
         }
 
         private System.Windows.Forms.TextBox TxtUsernameFP;
-        private System.Windows.Forms.TextBox TxtDuiFP;
 
         private System.Windows.Forms.TextBox TxtPasswordFP;
         private System.Windows.Forms.Button BtnSearch;

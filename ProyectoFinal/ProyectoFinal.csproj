@@ -25,10 +25,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="ForgotPassword.cs">
+      <Compile Update="View\FrmForgotPassword.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="CreaterUser.cs">
+      <Compile Update="View\FrmCreaterUser.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\FrmCreateEmployee.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\FrmPrincipal.cs">
         <SubType>Form</SubType>
       </Compile>
 
