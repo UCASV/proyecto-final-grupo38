@@ -31,76 +31,72 @@ namespace ProyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreaterUser));
-            this.tlpCreateUser = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreaterUser));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.gbDiseaseQuestion = new System.Windows.Forms.GroupBox();
-            this.radNo = new System.Windows.Forms.RadioButton();
-            this.radYes = new System.Windows.Forms.RadioButton();
-            this.btnAddDisease = new System.Windows.Forms.Button();
-            this.txtDisease = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtDui = new System.Windows.Forms.TextBox();
-            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.tlpCreateUser.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.groupBox.SuspendLayout();
-            this.gbDiseaseQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tlpCreateUser
+            // tableLayoutPanel1
             // 
-            this.tlpCreateUser.ColumnCount = 6;
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCreateUser.Controls.Add(this.label9, 4, 7);
-            this.tlpCreateUser.Controls.Add(this.label2, 1, 0);
-            this.tlpCreateUser.Controls.Add(this.BtnBack, 0, 0);
-            this.tlpCreateUser.Controls.Add(this.pictureBox1, 5, 0);
-            this.tlpCreateUser.Controls.Add(this.groupBox, 0, 2);
-            this.tlpCreateUser.Controls.Add(this.button1, 5, 7);
-            this.tlpCreateUser.Location = new System.Drawing.Point(1, 0);
-            this.tlpCreateUser.Name = "tlpCreateUser";
-            this.tlpCreateUser.RowCount = 8;
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.88889F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.80753F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.38912F));
-            this.tlpCreateUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCreateUser.Size = new System.Drawing.Size(901, 554);
-            this.tlpCreateUser.TabIndex = 0;
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.label9, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BtnBack, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 5, 7);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.88889F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.80753F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.38912F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 478);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(612, 476);
+            this.label9.Location = new System.Drawing.Point(531, 412);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 78);
+            this.label9.Size = new System.Drawing.Size(126, 66);
             this.label9.TabIndex = 20;
             this.label9.Text = "Register";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,13 +104,13 @@ namespace ProyectoFinal
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpCreateUser.SetColumnSpan(this.label2, 4);
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 4);
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(153, 0);
+            this.label2.Location = new System.Drawing.Point(135, 0);
             this.label2.Name = "label2";
-            this.tlpCreateUser.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(594, 134);
+            this.tableLayoutPanel1.SetRowSpan(this.label2, 2);
+            this.label2.Size = new System.Drawing.Size(522, 116);
             this.label2.TabIndex = 2;
             this.label2.Text = "Create User";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,10 +122,10 @@ namespace ProyectoFinal
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(3, 34);
+            this.BtnBack.Location = new System.Drawing.Point(3, 25);
             this.BtnBack.Name = "BtnBack";
-            this.tlpCreateUser.SetRowSpan(this.BtnBack, 2);
-            this.BtnBack.Size = new System.Drawing.Size(144, 65);
+            this.tableLayoutPanel1.SetRowSpan(this.BtnBack, 2);
+            this.BtnBack.Size = new System.Drawing.Size(126, 65);
             this.BtnBack.TabIndex = 3;
             this.BtnBack.UseVisualStyleBackColor = true;
             // 
@@ -137,10 +133,10 @@ namespace ProyectoFinal
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(753, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(663, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.tlpCreateUser.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(145, 65);
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -148,138 +144,83 @@ namespace ProyectoFinal
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tlpCreateUser.SetColumnSpan(this.groupBox, 6);
-            this.groupBox.Controls.Add(this.gbDiseaseQuestion);
-            this.groupBox.Controls.Add(this.btnAddDisease);
-            this.groupBox.Controls.Add(this.txtDisease);
-            this.groupBox.Controls.Add(this.txtId);
-            this.groupBox.Controls.Add(this.txtEmail);
-            this.groupBox.Controls.Add(this.txtPhone);
-            this.groupBox.Controls.Add(this.txtAddress);
-            this.groupBox.Controls.Add(this.txtDui);
-            this.groupBox.Controls.Add(this.txtFullName);
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox, 6);
+            this.groupBox.Controls.Add(this.button2);
+            this.groupBox.Controls.Add(this.richTextBox1);
+            this.groupBox.Controls.Add(this.textBox6);
+            this.groupBox.Controls.Add(this.textBox5);
+            this.groupBox.Controls.Add(this.textBox4);
+            this.groupBox.Controls.Add(this.textBox3);
+            this.groupBox.Controls.Add(this.textBox2);
             this.groupBox.Controls.Add(this.label8);
             this.groupBox.Controls.Add(this.label7);
             this.groupBox.Controls.Add(this.label6);
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.label4);
             this.groupBox.Controls.Add(this.label3);
+            this.groupBox.Controls.Add(this.textBox1);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox.ForeColor = System.Drawing.Color.White;
-            this.groupBox.Location = new System.Drawing.Point(38, 137);
+            this.groupBox.Location = new System.Drawing.Point(24, 131);
             this.groupBox.Name = "groupBox";
-            this.tlpCreateUser.SetRowSpan(this.groupBox, 5);
-            this.groupBox.Size = new System.Drawing.Size(825, 336);
+            this.tableLayoutPanel1.SetRowSpan(this.groupBox, 5);
+            this.groupBox.Size = new System.Drawing.Size(750, 265);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Create User";
             // 
-            // gbDiseaseQuestion
+            // richTextBox1
             // 
-            this.gbDiseaseQuestion.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
-            this.gbDiseaseQuestion.Controls.Add(this.radNo);
-            this.gbDiseaseQuestion.Controls.Add(this.radYes);
-            this.gbDiseaseQuestion.ForeColor = System.Drawing.Color.White;
-            this.gbDiseaseQuestion.Location = new System.Drawing.Point(374, 142);
-            this.gbDiseaseQuestion.Name = "gbDiseaseQuestion";
-            this.gbDiseaseQuestion.Size = new System.Drawing.Size(373, 70);
-            this.gbDiseaseQuestion.TabIndex = 23;
-            this.gbDiseaseQuestion.TabStop = false;
-            this.gbDiseaseQuestion.Text = "Do you suffer from any illness or disease?";
+            this.richTextBox1.Location = new System.Drawing.Point(361, 171);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(318, 63);
+            this.richTextBox1.TabIndex = 19;
+            this.richTextBox1.Text = "";
             // 
-            // radNo
+            // textBox6
             // 
-            this.radNo.Location = new System.Drawing.Point(214, 27);
-            this.radNo.Name = "radNo";
-            this.radNo.Size = new System.Drawing.Size(103, 24);
-            this.radNo.TabIndex = 0;
-            this.radNo.TabStop = true;
-            this.radNo.Text = "No";
-            this.radNo.UseVisualStyleBackColor = true;
+            this.textBox6.Location = new System.Drawing.Point(169, 205);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(159, 26);
+            this.textBox6.TabIndex = 18;
             // 
-            // radYes
+            // textBox5
             // 
-            this.radYes.Location = new System.Drawing.Point(61, 27);
-            this.radYes.Name = "radYes";
-            this.radYes.Size = new System.Drawing.Size(103, 24);
-            this.radYes.TabIndex = 0;
-            this.radYes.TabStop = true;
-            this.radYes.Text = "Yes";
-            this.radYes.UseVisualStyleBackColor = true;
+            this.textBox5.Location = new System.Drawing.Point(169, 145);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(159, 26);
+            this.textBox5.TabIndex = 17;
             // 
-            // btnAddDisease
+            // textBox4
             // 
-            this.btnAddDisease.Enabled = false;
-            this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDisease.Location = new System.Drawing.Point(689, 236);
-            this.btnAddDisease.Name = "btnAddDisease";
-            this.btnAddDisease.Size = new System.Drawing.Size(76, 40);
-            this.btnAddDisease.TabIndex = 22;
-            this.btnAddDisease.Text = "Add";
-            this.btnAddDisease.UseVisualStyleBackColor = true;
-            this.btnAddDisease.Click += new System.EventHandler(this.btnAddDisease_Click);
+            this.textBox4.Location = new System.Drawing.Point(464, 96);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(159, 26);
+            this.textBox4.TabIndex = 16;
             // 
-            // txtDisease
+            // textBox3
             // 
-            this.txtDisease.Location = new System.Drawing.Point(374, 250);
-            this.txtDisease.Multiline = true;
-            this.txtDisease.Name = "txtDisease";
-            this.txtDisease.ReadOnly = true;
-            this.txtDisease.Size = new System.Drawing.Size(262, 26);
-            this.txtDisease.TabIndex = 19;
+            this.textBox3.Location = new System.Drawing.Point(169, 93);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(159, 26);
+            this.textBox3.TabIndex = 15;
             // 
-            // txtId
+            // textBox2
             // 
-            this.txtId.Location = new System.Drawing.Point(182, 219);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(159, 26);
-            this.txtId.TabIndex = 18;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(182, 159);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(159, 26);
-            this.txtEmail.TabIndex = 17;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(477, 110);
-            this.txtPhone.Multiline = true;
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(159, 26);
-            this.txtPhone.TabIndex = 16;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(182, 107);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(159, 26);
-            this.txtAddress.TabIndex = 15;
-            // 
-            // txtDui
-            // 
-            this.txtDui.Location = new System.Drawing.Point(182, 55);
-            this.txtDui.Multiline = true;
-            this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(159, 26);
-            this.txtDui.TabIndex = 14;
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(477, 55);
-            this.txtFullName.Multiline = true;
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(159, 26);
-            this.txtFullName.TabIndex = 14;
+            this.textBox2.Location = new System.Drawing.Point(464, 41);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 26);
+            this.textBox2.TabIndex = 14;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(374, 215);
+            this.label8.Location = new System.Drawing.Point(361, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(173, 23);
             this.label8.TabIndex = 13;
@@ -287,16 +228,16 @@ namespace ProyectoFinal
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(42, 222);
+            this.label7.Location = new System.Drawing.Point(29, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 23);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Identifier";
+            this.label7.Text = "ID Building :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(64, 165);
+            this.label6.Location = new System.Drawing.Point(51, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 23);
             this.label6.TabIndex = 5;
@@ -305,7 +246,7 @@ namespace ProyectoFinal
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(359, 110);
+            this.label5.Location = new System.Drawing.Point(346, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 23);
             this.label5.TabIndex = 4;
@@ -314,7 +255,7 @@ namespace ProyectoFinal
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(64, 107);
+            this.label4.Location = new System.Drawing.Point(51, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 23);
             this.label4.TabIndex = 3;
@@ -323,16 +264,24 @@ namespace ProyectoFinal
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(359, 58);
+            this.label3.Location = new System.Drawing.Point(346, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Full Name:";
+            this.label3.Text = "Username :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(169, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(159, 26);
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(115, 58);
+            this.label1.Location = new System.Drawing.Point(102, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 23);
             this.label1.TabIndex = 0;
@@ -346,12 +295,11 @@ namespace ProyectoFinal
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(753, 479);
+            this.button1.Location = new System.Drawing.Point(663, 415);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 72);
+            this.button1.Size = new System.Drawing.Size(91, 60);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -368,50 +316,31 @@ namespace ProyectoFinal
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
-            this.ClientSize = new System.Drawing.Size(904, 555);
-            this.Controls.Add(this.tlpCreateUser);
-            this.Name = "CreaterUser";
+            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Name = "FrmCreaterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreaterUser";
-            this.tlpCreateUser.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
-            this.gbDiseaseQuestion.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.RadioButton radYes;
-
-        private System.Windows.Forms.RadioButton radNel;
-
-        private System.Windows.Forms.RadioButton radSi;
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-
-        private System.Windows.Forms.GroupBox gbDiseaseQuestion;
-
-        private System.Windows.Forms.GroupBox groupBox1;
-
-        private System.Windows.Forms.TextBox txtId;
-        
-        private System.Windows.Forms.TextBox txtFullName;
-        
-        private System.Windows.Forms.TextBox txtPhone;
-        
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtDui;
-
-        private System.Windows.Forms.TextBox txtEmail;
-
-        private System.Windows.Forms.TextBox txtDisease;
-        private System.Windows.Forms.Button btnAddDisease;
+        private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Label label9;
 
         private System.Windows.Forms.Button button1;
-        
+
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+
         private System.Windows.Forms.Label label8;
 
         private System.Windows.Forms.Label label5;
@@ -423,10 +352,13 @@ namespace ProyectoFinal
         private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.PictureBox pictureBox1;
 
         private System.Windows.Forms.GroupBox groupBox;
+
+        private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.Button BtnBack;
 
