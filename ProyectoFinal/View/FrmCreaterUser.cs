@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
+using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
 
 namespace ProyectoFinal
@@ -24,34 +25,65 @@ namespace ProyectoFinal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var citizen = new Citizen
+            var validations = new Validations();
+            var dui = "";
+            var fullName = "";
+            var email = "";
+            var address = "";
+            var phone = "";
+            var validData = false;
+
+            if (validations.ValidateNumbersOnly(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
+                    validations.ValidateEmail(txtEmail.Text) && validations.ValidateNumbersOnly(txtPhone.Text) && validations.ValidateEmpty(txtAddress.Text))
             {
-                Dui = txtDui.Text,
-                FullName = txtFullName.Text,
-                Address = txtAddress.Text,
-                Phone = txtPhone.Text,
-                Email = txtEmail.Text,
-                Identifier = txtId.Text
-            };
+                dui = txtDui.Text.Insert(8, "-"); // Format DUI
+                fullName = txtFullName.Text;
+                address = txtAddress.Text;
+                email = txtEmail.Text;
+                phone = txtPhone.Text.Insert(4, "-"); // Format phone
+                
+                validData = true; // Allow registration
+            }
+
+            if (validData)
+            {
+                // Create new Citizen instance
+                var citizen = new Citizen
+                {
+                    Dui = dui.Trim(),
+                    FullName = fullName.Trim(),
+                    Address = address.Trim(),
+                    Phone = phone.Trim(),
+                    Email = email.Trim(),
+                    Identifier = txtId.Text.Trim()
+                };
             
-            using (var db = new VaccinationDBContext())
-            {
-                var result = db.Citizens
-                    .Where(c => c.Dui.Equals(citizen.Dui))
-                    .ToList();
-
-                if (result.Count() == 0)
+                using (var db = new VaccinationDBContext())
                 {
-                    db.Add(citizen);
-                    db.SaveChanges();
+                    // Check if there's another register with same DUI
+                    var result = db.Citizens
+                        .Where(c => c.Dui.Equals(citizen.Dui))
+                        .ToList();
 
-                    MessageBox.Show("Citizen registered succesfully.", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Citizen has already been registered", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (result.Count() == 0)
+                    {
+                        // Save into DB
+                        db.Add(citizen);
+                        db.SaveChanges();
+
+                        MessageBox.Show("Citizen registered succesfully.", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Citizen has already been registered", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Incorrect data, check again please.", "Citizen register", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
 
         private void btnAddDisease_Click(object sender, EventArgs e)
