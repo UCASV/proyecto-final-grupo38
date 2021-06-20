@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
+using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
 
 namespace ProyectoFinal
@@ -39,18 +40,18 @@ namespace ProyectoFinal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Trim() == "" &&
-                txtPassword.Text.Trim() == "") //validación por si esta vacío el textbox
+            var validations = new Validations();
+            
+            if (validations.ValidateEmpty(txtUsername.Text.Trim()) && validations.ValidateEmpty(txtPassword.Text.Trim())) // Check if empty
             {
-                //Mensaje de Error
-                MessageBox.Show("Los campos estan vacios :(", "Vacunación El Salvador",
+                // Error message
+                MessageBox.Show("Blank spaces are not allowed :(", "El Salvador's Vaccination",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             else
             {
-                //conectamos con base de datos para verificar si existe el usuario
-                // y tiene la misma contraseña
+                // Check on db if user exists
+                // If exists check password
                 var db = new VaccinationDBContext(/*userResult[0] */);
                 List<Employee> users = db.Employees
                     .Include(u => u.Vaccines).ToList();
@@ -58,23 +59,23 @@ namespace ProyectoFinal
                 string userid = txtUsername.Text;
                 string password = txtPassword.Text;
 
-                // Usuario que tiene el mismo carnet
+                // User that has same id
                 List<Employee> userResult = users
                     .Where(u => u.Username == userid && u.Password == password)
                     .ToList();
 
-                if (userResult.Count > 0) //si existe
+                if (userResult.Count > 0) // If user exists
                 {
-                    MessageBox.Show("Bienvenido al portal de Vacunación!", "Vacunación El Salvador",
+                    MessageBox.Show("Welcome to Vaccination System!", "El Salvador's Vaccination",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     FrmPrincipal window = new FrmPrincipal();
                     window.Show();
                     this.Hide();
                 }
-                else //si no existe
+                else // If user doesn't exist 
                 {
-                    MessageBox.Show("Usuario no existe!", "Vacunación El Salvador",
+                    MessageBox.Show("User or password incorrect!", "El Salvador's Vaccination",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

@@ -38,6 +38,8 @@ namespace ProyectoFinal
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.gbDiseaseQuestion = new System.Windows.Forms.GroupBox();
             this.radNo = new System.Windows.Forms.RadioButton();
             this.radYes = new System.Windows.Forms.RadioButton();
@@ -149,6 +151,8 @@ namespace ProyectoFinal
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tlpCreateUser.SetColumnSpan(this.groupBox, 6);
+            this.groupBox.Controls.Add(this.label11);
+            this.groupBox.Controls.Add(this.label10);
             this.groupBox.Controls.Add(this.gbDiseaseQuestion);
             this.groupBox.Controls.Add(this.btnAddDisease);
             this.groupBox.Controls.Add(this.txtDisease);
@@ -174,6 +178,26 @@ namespace ProyectoFinal
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Create User";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Yu Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label11.Location = new System.Drawing.Point(642, 115);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 23);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Use numbers only";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Yu Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label10.Location = new System.Drawing.Point(182, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 23);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Use numbers only";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbDiseaseQuestion
             // 
@@ -248,6 +272,7 @@ namespace ProyectoFinal
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(477, 110);
+            this.txtPhone.MaxLength = 8;
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(159, 26);
@@ -264,6 +289,7 @@ namespace ProyectoFinal
             // txtDui
             // 
             this.txtDui.Location = new System.Drawing.Point(182, 55);
+            this.txtDui.MaxLength = 9;
             this.txtDui.Multiline = true;
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(159, 26);
@@ -336,7 +362,7 @@ namespace ProyectoFinal
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dui :";
+            this.label1.Text = "DUI :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button1
@@ -353,7 +379,7 @@ namespace ProyectoFinal
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CreaterUser
+            // FrmCreaterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -370,6 +396,10 @@ namespace ProyectoFinal
             this.gbDiseaseQuestion.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label11;
+
+        private System.Windows.Forms.Label label10;
 
         private System.Windows.Forms.RadioButton radYes;
 
