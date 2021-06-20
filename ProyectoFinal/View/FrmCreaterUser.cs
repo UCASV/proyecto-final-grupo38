@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
 using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
@@ -88,38 +90,46 @@ namespace ProyectoFinal
 
         private void btnAddDisease_Click(object sender, EventArgs e)
         {
-            if (txtDui.Text.Length < 10)
+            var validations = new Validations();
+            var dui = "";
+            
+            if (!validations.ValidateNumbersOnly(txtDui.Text))
             {
                 MessageBox.Show("You must introduce your DUI before adding a medical condition.", "Add Medical Condition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                var disease = new Disease
-                {
-                    Disease1 = txtDisease.Text,
-                    DuiCitizen = txtDui.Text
-                };
+                dui = txtDui.Text.Insert(8, "-");
 
-                using (var db = new VaccinationDBContext())
+                if (CheckCitizen(dui))
                 {
-                    var result = db.Diseases
-                        .Where(d => d.Disease1.Equals(disease.Disease1))
-                        .Where(d1 => d1.DuiCitizen.Equals(disease.DuiCitizen))
-                        .ToList();
-
-                    if (result.Count() == 0)
+                    var disease = new Disease
                     {
-                        db.Add(disease);
-                        db.SaveChanges();
+                        Disease1 = txtDisease.Text,
+                        DuiCitizen = dui 
+                    };
+
+                    using (var db = new VaccinationDBContext())
+                    {
+                        var result = db.Diseases
+                            .Where(d => d.Disease1.Equals(disease.Disease1))
+                            .Where(d1 => d1.DuiCitizen.Equals(disease.DuiCitizen))
+                            .ToList();
+
+                        if (result.Count() == 0)
+                        {
+                            db.Add(disease);
+                            db.SaveChanges();
                         
-                        MessageBox.Show("Medical condition added succesfully.", "Add Medical Condition", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Medical condition added succesfully.", "Add Medical Condition", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Medical condition has already been added.", "Add Medical Condition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Medical condition has already been added.", "Add Medical Condition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    txtDisease.Clear();
                 }
-                txtDisease.Clear();
             }
         }
 
@@ -127,6 +137,36 @@ namespace ProyectoFinal
         {
             txtDisease.ReadOnly = true;
             btnAddDisease.Enabled = false;
+        }
+
+        private void radYes_CheckedChanged(object sender, EventArgs e)
+        {
+            txtDisease.ReadOnly = false;
+            btnAddDisease.Enabled = true;
+            
+        }
+
+        private bool CheckCitizen(string dui)
+        {
+            var db = new VaccinationDBContext(/*userResult[0] */);
+            List<Citizen> citizens = db.Citizens
+                .Include(c => c.Vaccines).ToList();
+            
+            List<Citizen> citizenResult = citizens
+                .Where(u => u.Dui == dui)
+                .ToList();
+
+            if (citizenResult.Count > 0) // If user exists
+            {
+                return true;
+            }
+            else // If user doesn't exist 
+            {
+                MessageBox.Show("There are no users with this DUI!", "El Salvador's Vaccination",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                return false;
+            }
         }
     }
 }

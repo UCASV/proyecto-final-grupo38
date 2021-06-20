@@ -231,6 +231,7 @@ namespace ProyectoFinal
             this.radYes.TabStop = true;
             this.radYes.Text = "Yes";
             this.radYes.UseVisualStyleBackColor = true;
+            this.radYes.CheckedChanged += new System.EventHandler(this.radYes_CheckedChanged);
             // 
             // btnAddDisease
             // 
