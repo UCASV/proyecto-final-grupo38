@@ -135,6 +135,7 @@
             this.BtnCreateUser.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.BtnCreateUser.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnCreateUser.BackgroundImage")));
             this.BtnCreateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCreateUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCreateUser.FlatAppearance.BorderSize = 0;
             this.BtnCreateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCreateUser.Location = new System.Drawing.Point(216, 303);
@@ -149,6 +150,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button4.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(57, 303);
@@ -163,6 +165,7 @@
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnLogin.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Location = new System.Drawing.Point(375, 303);
@@ -177,6 +180,7 @@
             this.BtnForgoPassword.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.BtnForgoPassword.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnForgoPassword.BackgroundImage")));
             this.BtnForgoPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnForgoPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnForgoPassword.FlatAppearance.BorderSize = 0;
             this.BtnForgoPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnForgoPassword.Location = new System.Drawing.Point(535, 303);

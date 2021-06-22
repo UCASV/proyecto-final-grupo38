@@ -38,7 +38,6 @@ namespace ProyectoFinal
             this.label6 = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.TxtPasswordFP = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,7 +83,6 @@ namespace ProyectoFinal
             this.GroupBox.Controls.Add(this.label6);
             this.GroupBox.Controls.Add(this.BtnSearch);
             this.GroupBox.Controls.Add(this.TxtPasswordFP);
-            this.GroupBox.Controls.Add(this.label5);
             this.GroupBox.Controls.Add(this.label4);
             this.GroupBox.Controls.Add(this.label3);
             this.GroupBox.Controls.Add(this.label2);
@@ -100,7 +98,7 @@ namespace ProyectoFinal
             // 
             // TxtUsernameFP
             // 
-            this.TxtUsernameFP.Location = new System.Drawing.Point(185, 53);
+            this.TxtUsernameFP.Location = new System.Drawing.Point(217, 61);
             this.TxtUsernameFP.Multiline = true;
             this.TxtUsernameFP.Name = "TxtUsernameFP";
             this.TxtUsernameFP.Size = new System.Drawing.Size(168, 30);
@@ -109,7 +107,7 @@ namespace ProyectoFinal
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(388, 86);
+            this.label6.Location = new System.Drawing.Point(400, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 32);
             this.label6.TabIndex = 8;
@@ -120,39 +118,29 @@ namespace ProyectoFinal
             // 
             this.BtnSearch.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnSearch.BackgroundImage")));
             this.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSearch.FlatAppearance.BorderSize = 0;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearch.Location = new System.Drawing.Point(388, 29);
+            this.BtnSearch.Location = new System.Drawing.Point(400, 37);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(110, 54);
+            this.BtnSearch.Size = new System.Drawing.Size(109, 54);
             this.BtnSearch.TabIndex = 7;
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // TxtPasswordFP
             // 
-            this.TxtPasswordFP.Location = new System.Drawing.Point(185, 186);
+            this.TxtPasswordFP.Location = new System.Drawing.Point(217, 158);
             this.TxtPasswordFP.Multiline = true;
             this.TxtPasswordFP.Name = "TxtPasswordFP";
             this.TxtPasswordFP.ReadOnly = true;
             this.TxtPasswordFP.Size = new System.Drawing.Size(168, 30);
             this.TxtPasswordFP.TabIndex = 6;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(70, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 32);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Password :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Location = new System.Drawing.Point(29, 118);
+            this.label4.Location = new System.Drawing.Point(0, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(526, 24);
             this.label4.TabIndex = 4;
@@ -162,7 +150,7 @@ namespace ProyectoFinal
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Location = new System.Drawing.Point(70, 59);
+            this.label3.Location = new System.Drawing.Point(102, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 32);
             this.label3.TabIndex = 2;
@@ -172,12 +160,12 @@ namespace ProyectoFinal
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Location = new System.Drawing.Point(70, 142);
+            this.label2.Location = new System.Drawing.Point(37, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 32);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Su contraseña es :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Text = "Your password is :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -198,13 +186,14 @@ namespace ProyectoFinal
             this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnBack.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnBack.BackgroundImage")));
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(3, 25);
+            this.BtnBack.Location = new System.Drawing.Point(3, 31);
             this.BtnBack.Name = "BtnBack";
             this.tableLayoutPanel1.SetRowSpan(this.BtnBack, 2);
-            this.BtnBack.Size = new System.Drawing.Size(127, 65);
+            this.BtnBack.Size = new System.Drawing.Size(127, 52);
             this.BtnBack.TabIndex = 0;
             this.BtnBack.UseVisualStyleBackColor = true;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
@@ -252,8 +241,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.TextBox textBox3;
-
-        private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.Label label4;
 
