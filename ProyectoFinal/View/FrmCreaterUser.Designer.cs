@@ -38,8 +38,6 @@ namespace ProyectoFinal
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.gbDiseaseQuestion = new System.Windows.Forms.GroupBox();
             this.radNo = new System.Windows.Forms.RadioButton();
             this.radYes = new System.Windows.Forms.RadioButton();
@@ -126,12 +124,13 @@ namespace ProyectoFinal
             this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnBack.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("BtnBack.BackgroundImage")));
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(3, 34);
+            this.BtnBack.Location = new System.Drawing.Point(3, 41);
             this.BtnBack.Name = "BtnBack";
             this.tlpCreateUser.SetRowSpan(this.BtnBack, 2);
-            this.BtnBack.Size = new System.Drawing.Size(144, 65);
+            this.BtnBack.Size = new System.Drawing.Size(144, 52);
             this.BtnBack.TabIndex = 3;
             this.BtnBack.UseVisualStyleBackColor = true;
             // 
@@ -151,8 +150,6 @@ namespace ProyectoFinal
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tlpCreateUser.SetColumnSpan(this.groupBox, 6);
-            this.groupBox.Controls.Add(this.label11);
-            this.groupBox.Controls.Add(this.label10);
             this.groupBox.Controls.Add(this.gbDiseaseQuestion);
             this.groupBox.Controls.Add(this.btnAddDisease);
             this.groupBox.Controls.Add(this.txtDisease);
@@ -179,33 +176,13 @@ namespace ProyectoFinal
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Create User";
             // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Yu Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label11.Location = new System.Drawing.Point(642, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 23);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Use numbers only";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Yu Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label10.Location = new System.Drawing.Point(182, 31);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 23);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Use numbers only";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // gbDiseaseQuestion
             // 
             this.gbDiseaseQuestion.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.gbDiseaseQuestion.Controls.Add(this.radNo);
             this.gbDiseaseQuestion.Controls.Add(this.radYes);
             this.gbDiseaseQuestion.ForeColor = System.Drawing.Color.White;
-            this.gbDiseaseQuestion.Location = new System.Drawing.Point(374, 142);
+            this.gbDiseaseQuestion.Location = new System.Drawing.Point(376, 159);
             this.gbDiseaseQuestion.Name = "gbDiseaseQuestion";
             this.gbDiseaseQuestion.Size = new System.Drawing.Size(373, 70);
             this.gbDiseaseQuestion.TabIndex = 23;
@@ -214,6 +191,7 @@ namespace ProyectoFinal
             // 
             // radNo
             // 
+            this.radNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radNo.Location = new System.Drawing.Point(214, 27);
             this.radNo.Name = "radNo";
             this.radNo.Size = new System.Drawing.Size(103, 24);
@@ -224,6 +202,7 @@ namespace ProyectoFinal
             // 
             // radYes
             // 
+            this.radYes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radYes.Location = new System.Drawing.Point(61, 27);
             this.radYes.Name = "radYes";
             this.radYes.Size = new System.Drawing.Size(103, 24);
@@ -235,9 +214,10 @@ namespace ProyectoFinal
             // 
             // btnAddDisease
             // 
+            this.btnAddDisease.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddDisease.Enabled = false;
             this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDisease.Location = new System.Drawing.Point(689, 236);
+            this.btnAddDisease.Location = new System.Drawing.Point(673, 274);
             this.btnAddDisease.Name = "btnAddDisease";
             this.btnAddDisease.Size = new System.Drawing.Size(76, 40);
             this.btnAddDisease.TabIndex = 22;
@@ -247,7 +227,7 @@ namespace ProyectoFinal
             // 
             // txtDisease
             // 
-            this.txtDisease.Location = new System.Drawing.Point(374, 250);
+            this.txtDisease.Location = new System.Drawing.Point(376, 280);
             this.txtDisease.Multiline = true;
             this.txtDisease.Name = "txtDisease";
             this.txtDisease.ReadOnly = true;
@@ -306,7 +286,7 @@ namespace ProyectoFinal
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(374, 215);
+            this.label8.Location = new System.Drawing.Point(376, 244);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(173, 23);
             this.label8.TabIndex = 13;
@@ -371,6 +351,7 @@ namespace ProyectoFinal
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(753, 479);
@@ -387,6 +368,7 @@ namespace ProyectoFinal
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.ClientSize = new System.Drawing.Size(904, 555);
             this.Controls.Add(this.tlpCreateUser);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "FrmCreaterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreaterUser";
@@ -397,10 +379,6 @@ namespace ProyectoFinal
             this.gbDiseaseQuestion.ResumeLayout(false);
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.Label label11;
-
-        private System.Windows.Forms.Label label10;
 
         private System.Windows.Forms.RadioButton radYes;
 

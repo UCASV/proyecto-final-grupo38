@@ -12,7 +12,7 @@ namespace ProyectoFinal
     public partial class FrmCreaterUser : Form
     {
         private System.Windows.Forms.RadioButton radNo;
-        private TableLayoutPanel tlpCreateUser;
+        private System.Windows.Forms.TableLayoutPanel tlpCreateUser;
 
         public FrmCreaterUser()
         {
