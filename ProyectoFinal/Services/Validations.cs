@@ -24,5 +24,22 @@ namespace ProyectoFinal.Services
         {
             return text.Length > 0;
         }
+
+        public bool ValidateDui(string dui)
+        {
+            const string Digit = "0123456789";
+            if (dui.Length != 10)
+            {
+                return false;
+            }
+            for (int i = 0; i < dui.Length; i++)
+            {
+                if ((i == 8 && dui[i] != '-') || (i != 8 && !Digit.Contains(dui[i])))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace ProyectoFinal
             btnAddDisease.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             var validations = new Validations();
             var dui = "";
@@ -35,7 +35,7 @@ namespace ProyectoFinal
             var phone = "";
             var validData = false;
 
-            if (validations.ValidateNumbersOnly(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
+            if (validations.ValidateDui(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
                     validations.ValidateEmail(txtEmail.Text) && validations.ValidateNumbersOnly(txtPhone.Text) && validations.ValidateEmpty(txtAddress.Text))
             {
                 dui = txtDui.Text.Insert(8, "-"); // Format DUI
@@ -162,7 +162,7 @@ namespace ProyectoFinal
             }
             else // If user doesn't exist 
             {
-                MessageBox.Show("There are no users with this DUI!", "El Salvador's Vaccination",
+                MessageBox.Show("There are no users matching this DUI!", "El Salvador's Vaccination",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
                 return false;

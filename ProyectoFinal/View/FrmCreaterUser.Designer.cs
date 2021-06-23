@@ -31,6 +31,7 @@ namespace ProyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreaterUser));
             this.tlpCreateUser = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,7 +57,12 @@ namespace ProyectoFinal
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.ttpDui = new System.Windows.Forms.ToolTip(this.components);
+            this.ttpEmail = new System.Windows.Forms.ToolTip(this.components);
+            this.ttpPhone = new System.Windows.Forms.ToolTip(this.components);
+            this.ttpMandatoryField = new System.Windows.Forms.ToolTip(this.components);
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tlpCreateUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.groupBox.SuspendLayout();
@@ -77,7 +83,7 @@ namespace ProyectoFinal
             this.tlpCreateUser.Controls.Add(this.BtnBack, 0, 0);
             this.tlpCreateUser.Controls.Add(this.pictureBox1, 5, 0);
             this.tlpCreateUser.Controls.Add(this.groupBox, 0, 2);
-            this.tlpCreateUser.Controls.Add(this.button1, 5, 7);
+            this.tlpCreateUser.Controls.Add(this.btnRegister, 5, 7);
             this.tlpCreateUser.Location = new System.Drawing.Point(1, 0);
             this.tlpCreateUser.Name = "tlpCreateUser";
             this.tlpCreateUser.RowCount = 8;
@@ -258,6 +264,7 @@ namespace ProyectoFinal
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(159, 26);
             this.txtPhone.TabIndex = 16;
+            this.ttpPhone.SetToolTip(this.txtPhone, "Enter your phone number using numbers only (No dash -). Example: 22577777");
             // 
             // txtAddress
             // 
@@ -266,6 +273,7 @@ namespace ProyectoFinal
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(159, 26);
             this.txtAddress.TabIndex = 15;
+            this.ttpEmail.SetToolTip(this.txtAddress, "Example: example@mail.com");
             // 
             // txtDui
             // 
@@ -275,6 +283,7 @@ namespace ProyectoFinal
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(159, 26);
             this.txtDui.TabIndex = 14;
+            this.ttpDui.SetToolTip(this.txtDui, "Enter your DUI using numbers only (No dash -). Example: 123456789");
             // 
             // txtFullName
             // 
@@ -309,6 +318,7 @@ namespace ProyectoFinal
             this.label6.TabIndex = 5;
             this.label6.Text = "E-Mail :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttpMandatoryField.SetToolTip(this.label6, "You must fill out this field in order to register.");
             // 
             // label5
             // 
@@ -316,8 +326,9 @@ namespace ProyectoFinal
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 23);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Cellphone :";
+            this.label5.Text = "Phone:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttpMandatoryField.SetToolTip(this.label5, "You must fill out this field in order to register.");
             // 
             // label4
             // 
@@ -327,6 +338,7 @@ namespace ProyectoFinal
             this.label4.TabIndex = 3;
             this.label4.Text = "Address :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttpMandatoryField.SetToolTip(this.label4, "You must fill out this field in order to register.");
             // 
             // label3
             // 
@@ -336,6 +348,7 @@ namespace ProyectoFinal
             this.label3.TabIndex = 2;
             this.label3.Text = "Full Name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttpMandatoryField.SetToolTip(this.label3, "You must fill out this field in order to register.");
             // 
             // label1
             // 
@@ -345,21 +358,54 @@ namespace ProyectoFinal
             this.label1.TabIndex = 0;
             this.label1.Text = "DUI :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ttpMandatoryField.SetToolTip(this.label1, "You must fill out this field in order to register.");
             // 
-            // button1
+            // btnRegister
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(753, 479);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 72);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRegister.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("btnRegister.BackgroundImage")));
+            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Location = new System.Drawing.Point(753, 479);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(91, 72);
+            this.btnRegister.TabIndex = 21;
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // ttpDui
+            // 
+            this.ttpDui.IsBalloon = true;
+            this.ttpDui.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttpDui.ToolTipTitle = "DUI Format";
+            // 
+            // ttpEmail
+            // 
+            this.ttpEmail.IsBalloon = true;
+            this.ttpEmail.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttpEmail.ToolTipTitle = "E-Mail Format";
+            // 
+            // ttpPhone
+            // 
+            this.ttpPhone.IsBalloon = true;
+            this.ttpPhone.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttpPhone.ToolTipTitle = "Phone Format";
+            // 
+            // ttpMandatoryField
+            // 
+            this.ttpMandatoryField.IsBalloon = true;
+            this.ttpMandatoryField.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
+            this.ttpMandatoryField.ToolTipTitle = "Mandatory Field!";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
+            this.webBrowser1.TabIndex = 0;
             // 
             // FrmCreaterUser
             // 
@@ -379,6 +425,19 @@ namespace ProyectoFinal
             this.gbDiseaseQuestion.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.WebBrowser webBrowser1;
+
+        private System.Windows.Forms.ToolTip ttpMandatoryField;
+
+        private System.Windows.Forms.ToolTip ttpPhone;
+
+        private System.Windows.Forms.ToolTip ttpEmail;
+
+        private System.Windows.Forms.ToolTip ttpDui;
+
+
+        private System.Windows.Forms.Button btnRegister;
 
         private System.Windows.Forms.RadioButton radYes;
 
@@ -409,7 +468,7 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.Label label9;
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReg;
         
         private System.Windows.Forms.Label label8;
 

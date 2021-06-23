@@ -34,8 +34,7 @@ namespace ProyectoFinal
                     .Include(u => u.Vaccines).ToList();
 
                 var userid = TxtUsernameFP.Text;
-                var identifier = Txt;
-                
+
                 List<Employee> userResult = users
                     .Where(u => u.Username == userid /*&& u.Identifier == identifier */)
                     .ToList();

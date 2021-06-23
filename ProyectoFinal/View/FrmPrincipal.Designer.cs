@@ -44,7 +44,6 @@ namespace ProyectoFinal
             this.txtDose = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtTimer = new Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker();
             this.txtIdPatient = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdAppointment = new System.Windows.Forms.TextBox();
@@ -58,7 +57,6 @@ namespace ProyectoFinal
             this.txtPatientName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.fullDateTimePicker1 = new Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPrintIdAppointment = new System.Windows.Forms.TextBox();
@@ -205,7 +203,6 @@ namespace ProyectoFinal
             this.grbCreateAppointment.Controls.Add(this.txtDose);
             this.grbCreateAppointment.Controls.Add(this.label4);
             this.grbCreateAppointment.Controls.Add(this.label3);
-            this.grbCreateAppointment.Controls.Add(this.dtTimer);
             this.grbCreateAppointment.Controls.Add(this.txtIdPatient);
             this.grbCreateAppointment.Controls.Add(this.label2);
             this.grbCreateAppointment.Controls.Add(this.txtIdAppointment);
@@ -273,18 +270,6 @@ namespace ProyectoFinal
             this.label3.Text = "Dose :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dtTimer
-            // 
-            this.dtTimer.AutoSize = true;
-            this.dtTimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtTimer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtTimer.Location = new System.Drawing.Point(470, 56);
-            this.dtTimer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtTimer.Name = "dtTimer";
-            this.dtTimer.Size = new System.Drawing.Size(234, 27);
-            this.dtTimer.TabIndex = 5;
-            this.dtTimer.Value = new System.DateTime(2021, 6, 22, 11, 46, 14, 759);
-            // 
             // txtIdPatient
             // 
             this.txtIdPatient.Location = new System.Drawing.Point(227, 102);
@@ -331,7 +316,6 @@ namespace ProyectoFinal
             this.groupBox1.Controls.Add(this.txtPatientName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.fullDateTimePicker1);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtPrintIdAppointment);
@@ -418,18 +402,6 @@ namespace ProyectoFinal
             this.label8.TabIndex = 6;
             this.label8.Text = "Dose :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // fullDateTimePicker1
-            // 
-            this.fullDateTimePicker1.AutoSize = true;
-            this.fullDateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fullDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fullDateTimePicker1.Location = new System.Drawing.Point(188, 149);
-            this.fullDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.fullDateTimePicker1.Name = "fullDateTimePicker1";
-            this.fullDateTimePicker1.Size = new System.Drawing.Size(234, 27);
-            this.fullDateTimePicker1.TabIndex = 5;
-            this.fullDateTimePicker1.Value = new System.DateTime(2021, 6, 22, 11, 46, 14, 759);
             // 
             // textBox6
             // 
@@ -799,10 +771,6 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.TextBox txtIdAppointment;
         private System.Windows.Forms.Label label2;
-
-        private Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker dtTimer;
-
-        private Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker fullDateTimePicker1;
 
         private System.Windows.Forms.TextBox textBox1;
 
