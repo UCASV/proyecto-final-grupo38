@@ -37,8 +37,9 @@ namespace ProyectoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblWarning = new System.Windows.Forms.Label();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
             this.TxtAddres = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -99,6 +100,7 @@ namespace ProyectoFinal
             this.button1.Size = new System.Drawing.Size(126, 52);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -130,8 +132,9 @@ namespace ProyectoFinal
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 6);
+            this.groupBox1.Controls.Add(this.lblWarning);
+            this.groupBox1.Controls.Add(this.cmbType);
             this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtType);
             this.groupBox1.Controls.Add(this.TxtAddres);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -152,6 +155,27 @@ namespace ProyectoFinal
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Employee";
             // 
+            // lblWarning
+            // 
+            this.lblWarning.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblWarning.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.lblWarning.Location = new System.Drawing.Point(185, 201);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(160, 46);
+            this.lblWarning.TabIndex = 13;
+            this.lblWarning.Text = "- Si usted no es gestor, no podra acceder al sistema.";
+            // 
+            // cmbType
+            // 
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {"Gestor", "Vacunador", "Supervisor", "Organizador", "Conductor"});
+            this.cmbType.Location = new System.Drawing.Point(185, 168);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(160, 30);
+            this.cmbType.TabIndex = 12;
+            this.cmbType.Text = "Gestor";
+            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
+            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(472, 172);
@@ -159,14 +183,6 @@ namespace ProyectoFinal
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(160, 26);
             this.txtEmail.TabIndex = 11;
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(185, 173);
-            this.txtType.Multiline = true;
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(160, 26);
-            this.txtType.TabIndex = 10;
             // 
             // TxtAddres
             // 
@@ -268,6 +284,7 @@ namespace ProyectoFinal
             this.button2.TabIndex = 7;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -300,6 +317,13 @@ namespace ProyectoFinal
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.ComboBox cmbType;
+
+        private System.Windows.Forms.Label label9;
+
+        private System.Windows.Forms.ComboBox comboBox1;
+
         private System.Windows.Forms.Label label8;
 
         private System.Windows.Forms.Button button2;
@@ -308,7 +332,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox TxtAddres;
-        private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.TextBox txtEmail;
 
         private System.Windows.Forms.Label label7;

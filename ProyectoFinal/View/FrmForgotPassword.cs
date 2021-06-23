@@ -34,9 +34,10 @@ namespace ProyectoFinal
                     .Include(u => u.Vaccines).ToList();
 
                 var userid = TxtUsernameFP.Text;
-
+                //var identifier = TxtIdentifierFP.Text;
+                
                 List<Employee> userResult = users
-                    .Where(u => u.Username == userid)
+                    .Where(u => u.Username == userid /*&& u.Identifier == identifier */)
                     .ToList();
                 if (userResult.Count == 0) //verificamos si existe el usuario para poder mostrarle su pregunta
                 {

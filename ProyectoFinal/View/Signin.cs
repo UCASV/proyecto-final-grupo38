@@ -28,7 +28,7 @@ namespace ProyectoFinal
 
         private void BtnCreateUser_Click(object sender, EventArgs e)
         {
-            FrmCreaterUser window = new FrmCreaterUser();
+            FrmCreateEmployee window = new FrmCreateEmployee();
             window.ShowDialog();
         }
 
@@ -69,8 +69,8 @@ namespace ProyectoFinal
                     MessageBox.Show("Welcome to Vaccination System!", "El Salvador's Vaccination",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    FrmPrincipal window = new FrmPrincipal();
-                    window.Show();
+                    //FrmPrincipal window = new FrmPrincipal();
+                    //window.Show();
                     this.Hide();
                 }
                 else // If user doesn't exist 

@@ -44,6 +44,8 @@ namespace ProyectoFinal
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -79,6 +81,8 @@ namespace ProyectoFinal
             // GroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.GroupBox, 4);
+            this.GroupBox.Controls.Add(this.textBox1);
+            this.GroupBox.Controls.Add(this.label5);
             this.GroupBox.Controls.Add(this.TxtUsernameFP);
             this.GroupBox.Controls.Add(this.label6);
             this.GroupBox.Controls.Add(this.BtnSearch);
@@ -98,7 +102,7 @@ namespace ProyectoFinal
             // 
             // TxtUsernameFP
             // 
-            this.TxtUsernameFP.Location = new System.Drawing.Point(217, 61);
+            this.TxtUsernameFP.Location = new System.Drawing.Point(217, 37);
             this.TxtUsernameFP.Multiline = true;
             this.TxtUsernameFP.Name = "TxtUsernameFP";
             this.TxtUsernameFP.Size = new System.Drawing.Size(168, 30);
@@ -150,7 +154,7 @@ namespace ProyectoFinal
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Location = new System.Drawing.Point(102, 59);
+            this.label3.Location = new System.Drawing.Point(102, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 32);
             this.label3.TabIndex = 2;
@@ -210,6 +214,24 @@ namespace ProyectoFinal
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Location = new System.Drawing.Point(89, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 32);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Identificador:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(217, 85);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 30);
+            this.textBox1.TabIndex = 11;
+            // 
             // FrmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,6 +250,8 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.TextBox TxtUsernameFP;
 
