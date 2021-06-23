@@ -34,6 +34,8 @@ namespace ProyectoFinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForgotPassword));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBox = new System.Windows.Forms.GroupBox();
+            this.TextIdentifierFP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.TxtUsernameFP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@ namespace ProyectoFinal
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -81,7 +81,7 @@ namespace ProyectoFinal
             // GroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.GroupBox, 4);
-            this.GroupBox.Controls.Add(this.textBox1);
+            this.GroupBox.Controls.Add(this.TextIdentifierFP);
             this.GroupBox.Controls.Add(this.label5);
             this.GroupBox.Controls.Add(this.TxtUsernameFP);
             this.GroupBox.Controls.Add(this.label6);
@@ -99,6 +99,24 @@ namespace ProyectoFinal
             this.GroupBox.TabIndex = 2;
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "User";
+            // 
+            // TextIdentifierFP
+            // 
+            this.TextIdentifierFP.Location = new System.Drawing.Point(217, 85);
+            this.TextIdentifierFP.Multiline = true;
+            this.TextIdentifierFP.Name = "TextIdentifierFP";
+            this.TextIdentifierFP.Size = new System.Drawing.Size(168, 30);
+            this.TextIdentifierFP.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Location = new System.Drawing.Point(89, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 32);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Identifier:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TxtUsernameFP
             // 
@@ -214,24 +232,6 @@ namespace ProyectoFinal
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(89, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 32);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Identificador:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(217, 85);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 30);
-            this.textBox1.TabIndex = 11;
-            // 
             // FrmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,6 +250,8 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox TextIdentifierFP;
 
         private System.Windows.Forms.Label label5;
 
