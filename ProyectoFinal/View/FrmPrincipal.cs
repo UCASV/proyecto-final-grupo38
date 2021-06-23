@@ -14,6 +14,8 @@ namespace ProyectoFinal
         private TextBox textBox7;
         private Label label10;
         private TextBox txtPrintIdAppointment;
+        private DateTimePicker DTPDay;
+        private DateTimePicker DTPHour;
 
         public FrmPrincipal()
         {

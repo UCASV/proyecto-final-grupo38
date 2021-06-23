@@ -58,7 +58,6 @@ namespace ProyectoFinal
             this.txtPatientName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.fullDateTimePicker1 = new Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPrintIdAppointment = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@ namespace ProyectoFinal
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.txtCreateIdEmployee = new System.Windows.Forms.TextBox();
@@ -87,7 +87,8 @@ namespace ProyectoFinal
             this.createAppointmentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label17 = new System.Windows.Forms.Label();
+            this.DTPDay = new System.Windows.Forms.DateTimePicker();
+            this.DTPHour = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -150,10 +151,10 @@ namespace ProyectoFinal
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 128);
+            this.tabControl1.Location = new System.Drawing.Point(3, 127);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(948, 531);
+            this.tabControl1.Size = new System.Drawing.Size(948, 532);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
             this.tabControl1.Visible = false;
@@ -165,7 +166,7 @@ namespace ProyectoFinal
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(940, 496);
+            this.tabPage1.Size = new System.Drawing.Size(940, 497);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create appointment";
             // 
@@ -323,6 +324,8 @@ namespace ProyectoFinal
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 6);
+            this.groupBox1.Controls.Add(this.DTPHour);
+            this.groupBox1.Controls.Add(this.DTPDay);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -331,7 +334,6 @@ namespace ProyectoFinal
             this.groupBox1.Controls.Add(this.txtPatientName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.fullDateTimePicker1);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtPrintIdAppointment);
@@ -419,18 +421,6 @@ namespace ProyectoFinal
             this.label8.Text = "Dose :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // fullDateTimePicker1
-            // 
-            this.fullDateTimePicker1.AutoSize = true;
-            this.fullDateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fullDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fullDateTimePicker1.Location = new System.Drawing.Point(188, 149);
-            this.fullDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.fullDateTimePicker1.Name = "fullDateTimePicker1";
-            this.fullDateTimePicker1.Size = new System.Drawing.Size(234, 27);
-            this.fullDateTimePicker1.TabIndex = 5;
-            this.fullDateTimePicker1.Value = new System.DateTime(2021, 6, 22, 11, 46, 14, 759);
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(451, 47);
@@ -473,7 +463,7 @@ namespace ProyectoFinal
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(940, 496);
+            this.tabPage2.Size = new System.Drawing.Size(940, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create Cubicle";
             // 
@@ -525,6 +515,15 @@ namespace ProyectoFinal
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create Cubicle";
+            // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(31, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(138, 23);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "ID Cubicle :";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
             // 
@@ -714,14 +713,22 @@ namespace ProyectoFinal
             this.printToolStripMenuItem.Size = new System.Drawing.Size(149, 28);
             this.printToolStripMenuItem.Text = "Print";
             // 
-            // label17
+            // DTPDay
             // 
-            this.label17.Location = new System.Drawing.Point(31, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(138, 23);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "ID Cubicle :";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DTPDay.Location = new System.Drawing.Point(188, 145);
+            this.DTPDay.Name = "DTPDay";
+            this.DTPDay.Size = new System.Drawing.Size(308, 35);
+            this.DTPDay.TabIndex = 14;
+            // 
+            // DTPHour
+            // 
+            this.DTPHour.CustomFormat = "";
+            this.DTPHour.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DTPHour.Location = new System.Drawing.Point(502, 145);
+            this.DTPHour.Name = "DTPHour";
+            this.DTPHour.Size = new System.Drawing.Size(136, 35);
+            this.DTPHour.TabIndex = 15;
+            this.DTPHour.Value = new System.DateTime(2021, 6, 22, 20, 13, 0, 0);
             // 
             // FrmPrincipal
             // 
@@ -754,6 +761,9 @@ namespace ProyectoFinal
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
 
         private System.Windows.Forms.Label label17;
 
@@ -801,8 +811,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.Label label2;
 
         private Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker dtTimer;
-
-        private Microsoft.Windows.ManagementUI.CombinedControls.FullDateTimePicker fullDateTimePicker1;
 
         private System.Windows.Forms.TextBox textBox1;
 

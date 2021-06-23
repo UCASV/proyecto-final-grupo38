@@ -34,7 +34,7 @@ namespace ProyectoFinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForgotPassword));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.TextIdentifierFP = new System.Windows.Forms.TextBox();
+            this.TxtIdentifier = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtUsernameFP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace ProyectoFinal
             // GroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.GroupBox, 4);
-            this.GroupBox.Controls.Add(this.TextIdentifierFP);
+            this.GroupBox.Controls.Add(this.TxtIdentifier);
             this.GroupBox.Controls.Add(this.label5);
             this.GroupBox.Controls.Add(this.TxtUsernameFP);
             this.GroupBox.Controls.Add(this.label6);
@@ -100,13 +100,13 @@ namespace ProyectoFinal
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "User";
             // 
-            // TextIdentifierFP
+            // TxtIdentifier
             // 
-            this.TextIdentifierFP.Location = new System.Drawing.Point(217, 85);
-            this.TextIdentifierFP.Multiline = true;
-            this.TextIdentifierFP.Name = "TextIdentifierFP";
-            this.TextIdentifierFP.Size = new System.Drawing.Size(168, 30);
-            this.TextIdentifierFP.TabIndex = 11;
+            this.TxtIdentifier.Location = new System.Drawing.Point(217, 85);
+            this.TxtIdentifier.Multiline = true;
+            this.TxtIdentifier.Name = "TxtIdentifier";
+            this.TxtIdentifier.Size = new System.Drawing.Size(168, 30);
+            this.TxtIdentifier.TabIndex = 11;
             // 
             // label5
             // 
@@ -251,7 +251,7 @@ namespace ProyectoFinal
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.TextBox TextIdentifierFP;
+        private System.Windows.Forms.TextBox TxtIdentifier;
 
         private System.Windows.Forms.Label label5;
 
@@ -275,7 +275,7 @@ namespace ProyectoFinal
         private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdentifier;
 
         private System.Windows.Forms.GroupBox GroupBox;
 
