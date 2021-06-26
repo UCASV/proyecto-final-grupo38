@@ -168,5 +168,16 @@ namespace ProyectoFinal
                 return false;
             }
         }
+
+        private void FrmCreaterUser_Load(object sender, EventArgs e)
+        {
+            ttpForm.SetToolTip(txtDui, "You must fill out this field in order to register. Only numbers allowed.");
+            ttpForm.SetToolTip(txtAddress, "You must fill out this field in order to register.");
+            ttpForm.SetToolTip(txtPhone, "You must fill out this field in order to register. Only numbers allowed. ");
+            ttpForm.SetToolTip(txtFullName, "You must fill out this field in order to register.");
+            ttpForm.SetToolTip(txtEmail, "This field is optional.");
+            ttpForm.SetToolTip(txtId, "This field is optional.");
+            ttpForm.SetToolTip(txtDisease, "This field is optional.");
+        }
     }
 }
