@@ -76,7 +76,18 @@ namespace ProyectoFinal
             this.txtCreateAddresCubicle = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.BtnCreateCubicle = new System.Windows.Forms.Button();
+            this.btnCreateAppointment = new System.Windows.Forms.Button();
+            this.Dgv = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CubicleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Iduser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DayandHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dose = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -85,7 +96,7 @@ namespace ProyectoFinal
             this.createAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAppointmentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -95,10 +106,14 @@ namespace ProyectoFinal
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.Dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -112,10 +127,10 @@ namespace ProyectoFinal
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -148,6 +163,7 @@ namespace ProyectoFinal
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 6);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tabControl1.Location = new System.Drawing.Point(3, 127);
             this.tabControl1.Name = "tabControl1";
@@ -606,22 +622,149 @@ namespace ProyectoFinal
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 1;
             // 
-            // pictureBox2
+            // tabPage3
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(797, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(154, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.tabPage3.Controls.Add(this.tableLayoutPanel4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(940, 497);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Appointment";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.Controls.Add(this.groupBox3, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 6);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 8;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(937, 491);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel4.SetColumnSpan(this.groupBox3, 6);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.BtnCreateCubicle);
+            this.groupBox3.Controls.Add(this.btnCreateAppointment);
+            this.groupBox3.Controls.Add(this.Dgv);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(59, 60);
+            this.groupBox3.Name = "groupBox3";
+            this.tableLayoutPanel4.SetRowSpan(this.groupBox3, 8);
+            this.groupBox3.Size = new System.Drawing.Size(818, 370);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Appointment";
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(551, 297);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(194, 32);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Create Patient";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // BtnCreateCubicle
+            // 
+            this.BtnCreateCubicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCreateCubicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCreateCubicle.Location = new System.Drawing.Point(312, 297);
+            this.BtnCreateCubicle.Name = "BtnCreateCubicle";
+            this.BtnCreateCubicle.Size = new System.Drawing.Size(194, 32);
+            this.BtnCreateCubicle.TabIndex = 2;
+            this.BtnCreateCubicle.Text = "Create Cubicle";
+            this.BtnCreateCubicle.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateAppointment
+            // 
+            this.btnCreateAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateAppointment.Location = new System.Drawing.Point(74, 297);
+            this.btnCreateAppointment.Name = "btnCreateAppointment";
+            this.btnCreateAppointment.Size = new System.Drawing.Size(194, 32);
+            this.btnCreateAppointment.TabIndex = 1;
+            this.btnCreateAppointment.Text = "Create Appointment";
+            this.btnCreateAppointment.UseVisualStyleBackColor = true;
+            // 
+            // Dgv
+            // 
+            this.Dgv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.ID, this.CubicleId, this.Iduser, this.DayandHour, this.Dose});
+            this.Dgv.GridColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.Dgv.Location = new System.Drawing.Point(74, 34);
+            this.Dgv.Name = "Dgv";
+            this.Dgv.RowTemplate.Height = 24;
+            this.Dgv.Size = new System.Drawing.Size(671, 227);
+            this.Dgv.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ID.HeaderText = "Appointment ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 150;
+            // 
+            // CubicleId
+            // 
+            this.CubicleId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.CubicleId.HeaderText = "Cubicle ID";
+            this.CubicleId.Name = "CubicleId";
+            this.CubicleId.ReadOnly = true;
+            this.CubicleId.Width = 110;
+            // 
+            // Iduser
+            // 
+            this.Iduser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Iduser.HeaderText = "Patient ID";
+            this.Iduser.Name = "Iduser";
+            this.Iduser.ReadOnly = true;
+            this.Iduser.Width = 108;
+            // 
+            // DayandHour
+            // 
+            this.DayandHour.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DayandHour.HeaderText = "Day and Hour";
+            this.DayandHour.Name = "DayandHour";
+            this.DayandHour.ReadOnly = true;
+            this.DayandHour.Width = 136;
+            // 
+            // Dose
+            // 
+            this.Dose.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Dose.HeaderText = "Dose";
+            this.Dose.Name = "Dose";
+            this.Dose.ReadOnly = true;
+            this.Dose.Width = 77;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(479, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(638, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -632,9 +775,9 @@ namespace ProyectoFinal
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(638, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(797, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 59);
+            this.pictureBox3.Size = new System.Drawing.Size(154, 59);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -642,14 +785,15 @@ namespace ProyectoFinal
             // menuStrip1
             // 
             this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 3);
+            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 2);
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.newPatientToolStripMenuItem, this.appointmentToolStripMenuItem, this.printToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(476, 65);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.newPatientToolStripMenuItem, this.appointmentToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(635, 65);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(478, 32);
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip1.Size = new System.Drawing.Size(319, 32);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -658,8 +802,8 @@ namespace ProyectoFinal
             this.newPatientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.createUserToolStripMenuItem, this.createAppointmentToolStripMenuItem, this.createAppointmentToolStripMenuItem1});
             this.newPatientToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.newPatientToolStripMenuItem.Name = "newPatientToolStripMenuItem";
-            this.newPatientToolStripMenuItem.Padding = new System.Windows.Forms.Padding(80, 0, 4, 0);
-            this.newPatientToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
+            this.newPatientToolStripMenuItem.Padding = new System.Windows.Forms.Padding(80, 2, 0, 2);
+            this.newPatientToolStripMenuItem.Size = new System.Drawing.Size(149, 28);
             this.newPatientToolStripMenuItem.Text = "Create";
             this.newPatientToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.newPatientToolStripMenuItem.Click += new System.EventHandler(this.newPatientToolStripMenuItem_Click);
@@ -685,16 +829,22 @@ namespace ProyectoFinal
             // appointmentToolStripMenuItem
             // 
             this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 0, 4, 0);
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(164, 28);
+            this.appointmentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 2, 0, 2);
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(160, 28);
             this.appointmentToolStripMenuItem.Text = "Appointment";
+            this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
             // 
-            // printToolStripMenuItem
+            // pictureBox2
             // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Padding = new System.Windows.Forms.Padding(90, 0, 4, 0);
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(149, 28);
-            this.printToolStripMenuItem.Text = "Print";
+            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox2, 3);
+            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(127, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox2, 3);
+            this.pictureBox2.Size = new System.Drawing.Size(505, 94);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -720,13 +870,42 @@ namespace ProyectoFinal
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.Dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pictureBox2;
+
+        private System.Windows.Forms.Button BtnCreateCubicle;
+        private System.Windows.Forms.Button button5;
+
+        private System.Windows.Forms.Button btnCreateAppointment;
+
+        private System.Windows.Forms.DataGridView Dgv;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn CubicleId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DayandHour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dose;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn Iduser;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private System.Windows.Forms.GroupBox groupBox3;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+
+        private System.Windows.Forms.TabPage tabPage3;
 
         private System.Windows.Forms.Label label17;
 
@@ -788,11 +967,8 @@ namespace ProyectoFinal
         private System.Windows.Forms.ToolStripMenuItem createUserToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem appointmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
 
         private System.Windows.Forms.PictureBox pictureBox3;
-
-        private System.Windows.Forms.PictureBox pictureBox2;
 
         private System.Windows.Forms.PictureBox pictureBox1;
 
