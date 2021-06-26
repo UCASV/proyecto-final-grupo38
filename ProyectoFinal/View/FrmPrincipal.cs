@@ -34,5 +34,15 @@ namespace ProyectoFinal
         {
             this.Hide();
         }
+
+        private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
