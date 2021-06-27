@@ -24,10 +24,10 @@ namespace ProyectoFinal
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             var validations = new Validations();
-            if (!validations.ValidateEmail(TxtUsernameFP.Text) || !validations.ValidateEmpty(TextIdentifierFP.Text)) // Empty spaces validation
+            if (!validations.ValidateEmpty(TxtUsernameFP.Text) || !validations.ValidateEmpty(TextIdentifierFP.Text)) // Empty spaces validation
             {
-                MessageBox.Show("Please enter valid values.",
-                    "El Salvador's Vaccination Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data is incorrect. Please enter valid values.",
+                    "El Salvador's Vaccination - Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -43,8 +43,8 @@ namespace ProyectoFinal
                     .ToList();
                 if (userResult.Count == 0) // Check if user exists
                 {
-                    MessageBox.Show("Please enter a valid user.",
-                        "El Salvador's Vaccination Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The user does not exist. Please enter a valid user.",
+                        "El Salvador's Vaccination - Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace ProyectoFinal
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Returning to Login ", "El Salvador's Vaccination Forgot Password",
+            MessageBox.Show("Returning to Login ", "El Salvador's Vaccination - Forgot Password",
                 MessageBoxButtons.OK, MessageBoxIcon.Information); 
             this.Hide();
         }
