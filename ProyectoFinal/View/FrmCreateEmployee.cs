@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
 
 namespace ProyectoFinal
@@ -14,9 +15,21 @@ namespace ProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text.Trim() =="" || txtName.Text.Trim() == "" || TxtAddres.Text.Trim() =="")
+            var validations = new Validations();
+            if (!validations.ValidateEmpty(txtEmail.Text.Trim()) || !validations.ValidateEmpty(txtName.Text.Trim()) || !validations.ValidateEmpty(TxtAddres.Text.Trim()) 
+                || !validations.ValidateEmpty(txtUsername.Text) || !validations.ValidateEmpty(txtPassword.Text))
             {
-                MessageBox.Show("fill in all the fields.", "Employee Registration",
+                MessageBox.Show("Blank spaces are not allowed", "Employee Registration",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!validations.ValidateEmail(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email format is not correct", "Employee Registration",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!validations.ValidateLettersOnly(txtName.Text))
+            {
+                MessageBox.Show("Please use only letters at name field", "Employee Registration",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
