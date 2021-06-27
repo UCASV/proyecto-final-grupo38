@@ -239,11 +239,12 @@ namespace ProyectoFinal
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.ClientSize = new System.Drawing.Size(805, 423);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ForgotPassword";
+            this.Text = "Forgot Password";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.GroupBox.ResumeLayout(false);
             this.GroupBox.PerformLayout();
