@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
+using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
 
 namespace ProyectoFinal
@@ -22,9 +23,10 @@ namespace ProyectoFinal
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            if (TxtUsernameFP.Text.Trim() == "" || TextIdentifierFP.Text.Trim() == "") //validación por si esta vacío el textbox
+            var validations = new Validations();
+            if (!validations.ValidateEmail(TxtUsernameFP.Text) || !validations.ValidateEmpty(TextIdentifierFP.Text)) // Empty spaces validation
             {
-                MessageBox.Show("enter valid values.",
+                MessageBox.Show("Please enter valid values.",
                     "El Salvador's Vaccination Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -39,9 +41,9 @@ namespace ProyectoFinal
                 List<Employee> userResult = users
                     .Where(u => u.Username == userid && u.Identifier == identifier)
                     .ToList();
-                if (userResult.Count == 0) //verificamos si existe el usuario para poder mostrarle su pregunta
+                if (userResult.Count == 0) // Check if user exists
                 {
-                    MessageBox.Show("enter a valid user.",
+                    MessageBox.Show("Please enter a valid user.",
                         "El Salvador's Vaccination Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -53,7 +55,7 @@ namespace ProyectoFinal
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("returning to login ", "El Salvador's Vaccination Forgot Password",
+            MessageBox.Show("Returning to Login ", "El Salvador's Vaccination Forgot Password",
                 MessageBoxButtons.OK, MessageBoxIcon.Information); 
             this.Hide();
         }

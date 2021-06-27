@@ -35,7 +35,7 @@ namespace ProyectoFinal
             var phone = "";
             var validData = false;
 
-            if (validations.ValidateDui(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
+            if (validations.ValidateNumbersOnly(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
                     validations.ValidateEmail(txtEmail.Text) && validations.ValidateNumbersOnly(txtPhone.Text) && validations.ValidateEmpty(txtAddress.Text))
             {
                 dui = txtDui.Text.Insert(8, "-"); // Format DUI
@@ -57,7 +57,7 @@ namespace ProyectoFinal
                     Address = address.Trim(),
                     Phone = phone.Trim(),
                     Email = email.Trim(),
-                    Identifier = txtId.Text.Trim()
+                    Identifier = txtId.Text
                 };
             
                 using (var db = new VaccinationDBContext())
