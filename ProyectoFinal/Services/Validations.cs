@@ -12,7 +12,7 @@ namespace ProyectoFinal.Services
         
         public bool ValidateLettersOnly(string text)
         {
-            return ValidateEmpty(text) && text.All(char.IsLetter);
+            return ValidateEmpty(text) && text.All(char.IsLetter) || text.Contains(" ");
         }
 
         public bool ValidateEmail(string email)
