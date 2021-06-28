@@ -180,14 +180,14 @@ namespace ProyectoFinal
         }
 
         private void FrmCreaterUser_Load(object sender, EventArgs e)
-        {
-            ttpForm.SetToolTip(txtDui, "You must fill out this field in order to register. Only numbers allowed.");
-            ttpForm.SetToolTip(txtAddress, "You must fill out this field in order to register.");
-            ttpForm.SetToolTip(txtPhone, "You must fill out this field in order to register. Only numbers allowed. ");
-            ttpForm.SetToolTip(txtFullName, "You must fill out this field in order to register.");
-            ttpForm.SetToolTip(txtEmail, "This field is optional.");
-            ttpForm.SetToolTip(CmbIdentifier, "This field is optional.");
-            ttpForm.SetToolTip(txtDisease, "This field is optional.");
+        {            
+            var db = new VaccinationDBContext();
+
+            var identifiers = db.Identifiers.ToList();
+            
+            CmbIdentifier.ValueMember = "id";
+            CmbIdentifier.DisplayMember = "identifier1";
+            CmbIdentifier.DataSource = identifiers;
         }
     }
 }
