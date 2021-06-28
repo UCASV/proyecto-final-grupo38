@@ -35,8 +35,7 @@ namespace ProyectoFinal
             var phone = "";
             var validData = false;
 
-            if (validations.ValidateNumbersOnly(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && 
-                    validations.ValidateEmail(txtEmail.Text) && validations.ValidateNumbersOnly(txtPhone.Text) && validations.ValidateEmpty(txtAddress.Text))
+            if (validations.ValidateNumbersOnly(txtDui.Text) && validations.ValidateLettersOnly(txtFullName.Text) && validations.ValidateNumbersOnly(txtPhone.Text) && validations.ValidateEmpty(txtAddress.Text))
             {
                 dui = txtDui.Text.Insert(8, "-"); // Format DUI
                 fullName = txtFullName.Text;
@@ -133,12 +132,6 @@ namespace ProyectoFinal
             }
         }
 
-        private void cbNo_CheckedChanged(object sender, EventArgs e)
-        {
-            txtDisease.ReadOnly = true;
-            btnAddDisease.Enabled = false;
-        }
-
         private void radYes_CheckedChanged(object sender, EventArgs e)
         {
             txtDisease.ReadOnly = false;
@@ -162,7 +155,7 @@ namespace ProyectoFinal
             }
             else // If user doesn't exist 
             {
-                MessageBox.Show("There are no users matching this DUI!", "El Salvador's Vaccination",
+                MessageBox.Show("There are no users matching this DUI!", "El Salvador's Vaccination - Add Medical Condition",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
                 return false;
@@ -178,6 +171,13 @@ namespace ProyectoFinal
             CmbIdentifier.ValueMember = "id";
             CmbIdentifier.DisplayMember = "identifier1";
             CmbIdentifier.DataSource = identifiers;
+        }
+
+        private void radNo_CheckedChanged(object sender, EventArgs e)
+        {
+            txtDisease.ReadOnly = true;
+            btnAddDisease.Enabled = false;
+            txtDisease.Clear();
         }
     }
 }

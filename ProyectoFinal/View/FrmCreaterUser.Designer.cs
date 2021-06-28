@@ -237,6 +237,7 @@ namespace ProyectoFinal
             this.radNo.TabStop = true;
             this.radNo.Text = "No";
             this.radNo.UseVisualStyleBackColor = true;
+            this.radNo.CheckedChanged += new System.EventHandler(this.radNo_CheckedChanged);
             // 
             // radYes
             // 
