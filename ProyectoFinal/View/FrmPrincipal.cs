@@ -20,14 +20,9 @@ namespace ProyectoFinal
             InitializeComponent();
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
         private void newPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,9 +35,6 @@ namespace ProyectoFinal
             
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }
