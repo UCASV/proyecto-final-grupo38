@@ -97,6 +97,8 @@ namespace ProyectoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -214,6 +216,7 @@ namespace ProyectoFinal
             // 
             this.grbCreateAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.SetColumnSpan(this.grbCreateAppointment, 6);
+            this.grbCreateAppointment.Controls.Add(this.dateTimePicker1);
             this.grbCreateAppointment.Controls.Add(this.txtIdCubicle);
             this.grbCreateAppointment.Controls.Add(this.label5);
             this.grbCreateAppointment.Controls.Add(this.button2);
@@ -325,6 +328,7 @@ namespace ProyectoFinal
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 6);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -846,6 +850,22 @@ namespace ProyectoFinal
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(470, 56);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 35);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(188, 151);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(142, 35);
+            this.dateTimePicker2.TabIndex = 14;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -883,6 +903,10 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
