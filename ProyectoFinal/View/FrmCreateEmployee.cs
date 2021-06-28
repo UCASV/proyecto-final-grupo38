@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
@@ -102,6 +103,17 @@ namespace ProyectoFinal
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void FrmCreateEmployee_Load(object sender, EventArgs e)
+        {
+            var db = new VaccinationDBContext();
+
+            var employeeTypes = db.EmployeeTypes.ToList();
+
+            cmbType.ValueMember = "id";
+            cmbType.DisplayMember = "type";
+            cmbType.DataSource = employeeTypes;
         }
     }
 }

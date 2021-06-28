@@ -312,6 +312,7 @@ namespace ProyectoFinal
             this.Name = "FrmCreateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Employee";
+            this.Load += new System.EventHandler(this.FrmCreateEmployee_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
