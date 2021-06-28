@@ -80,14 +80,21 @@ namespace ProyectoFinal
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbType.Text.Trim() != "Gestor")
+            if (cmbType.Text.Trim() != "Manager")
             {
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 lblWarning.Visible = true;
                 lblWarning.ForeColor = Color.White;
-            }else
+            }
+            else
+            {
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
                 lblWarning.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

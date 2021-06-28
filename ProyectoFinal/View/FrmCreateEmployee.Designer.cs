@@ -163,7 +163,7 @@ namespace ProyectoFinal
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Size = new System.Drawing.Size(160, 46);
             this.lblWarning.TabIndex = 13;
-            this.lblWarning.Text = "- Si usted no es gestor, no podra acceder al sistema.";
+            this.lblWarning.Text = "Only Managers have access to the system.";
             // 
             // cmbType
             // 
