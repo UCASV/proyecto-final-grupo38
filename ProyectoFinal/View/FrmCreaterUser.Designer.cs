@@ -138,6 +138,7 @@ namespace ProyectoFinal
             this.BtnBack.Size = new System.Drawing.Size(144, 52);
             this.BtnBack.TabIndex = 3;
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // pictureBox1
             // 

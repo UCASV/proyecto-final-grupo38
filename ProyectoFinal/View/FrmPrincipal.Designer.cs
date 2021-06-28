@@ -38,6 +38,9 @@ namespace ProyectoFinal
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.grbCreateAppointment = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtIdCubicle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,9 +49,8 @@ namespace ProyectoFinal
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdPatient = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdAppointment = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -64,7 +66,6 @@ namespace ProyectoFinal
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.txtCreateIdEmployee = new System.Windows.Forms.TextBox();
@@ -75,7 +76,6 @@ namespace ProyectoFinal
             this.label12 = new System.Windows.Forms.Label();
             this.txtCreateAddresCubicle = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -97,8 +97,6 @@ namespace ProyectoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -162,6 +160,7 @@ namespace ProyectoFinal
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 6);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
@@ -179,10 +178,10 @@ namespace ProyectoFinal
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(940, 497);
+            this.tabPage1.Size = new System.Drawing.Size(940, 494);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create appointment";
             // 
@@ -216,6 +215,8 @@ namespace ProyectoFinal
             // 
             this.grbCreateAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.SetColumnSpan(this.grbCreateAppointment, 6);
+            this.grbCreateAppointment.Controls.Add(this.label1);
+            this.grbCreateAppointment.Controls.Add(this.dateTimePicker3);
             this.grbCreateAppointment.Controls.Add(this.dateTimePicker1);
             this.grbCreateAppointment.Controls.Add(this.txtIdCubicle);
             this.grbCreateAppointment.Controls.Add(this.label5);
@@ -225,8 +226,6 @@ namespace ProyectoFinal
             this.grbCreateAppointment.Controls.Add(this.label3);
             this.grbCreateAppointment.Controls.Add(this.txtIdPatient);
             this.grbCreateAppointment.Controls.Add(this.label2);
-            this.grbCreateAppointment.Controls.Add(this.txtIdAppointment);
-            this.grbCreateAppointment.Controls.Add(this.label1);
             this.grbCreateAppointment.ForeColor = System.Drawing.Color.White;
             this.grbCreateAppointment.Location = new System.Drawing.Point(28, 29);
             this.grbCreateAppointment.Name = "grbCreateAppointment";
@@ -236,9 +235,34 @@ namespace ProyectoFinal
             this.grbCreateAppointment.TabStop = false;
             this.grbCreateAppointment.Text = "Create Appointment";
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(298, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Hour :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker3.Location = new System.Drawing.Point(470, 102);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(142, 35);
+            this.dateTimePicker3.TabIndex = 13;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(470, 56);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 35);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
             // txtIdCubicle
             // 
-            this.txtIdCubicle.Location = new System.Drawing.Point(227, 140);
+            this.txtIdCubicle.Location = new System.Drawing.Point(227, 103);
             this.txtIdCubicle.Multiline = true;
             this.txtIdCubicle.Name = "txtIdCubicle";
             this.txtIdCubicle.Size = new System.Drawing.Size(65, 22);
@@ -246,7 +270,7 @@ namespace ProyectoFinal
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(61, 140);
+            this.label5.Location = new System.Drawing.Point(61, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 22);
             this.label5.TabIndex = 10;
@@ -263,10 +287,11 @@ namespace ProyectoFinal
             this.button2.TabIndex = 9;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtDose
             // 
-            this.txtDose.Location = new System.Drawing.Point(470, 102);
+            this.txtDose.Location = new System.Drawing.Point(470, 153);
             this.txtDose.Multiline = true;
             this.txtDose.Name = "txtDose";
             this.txtDose.Size = new System.Drawing.Size(142, 22);
@@ -278,12 +303,12 @@ namespace ProyectoFinal
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 23);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Day and hour :";
+            this.label4.Text = "Date :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(364, 102);
+            this.label3.Location = new System.Drawing.Point(364, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 6;
@@ -292,7 +317,7 @@ namespace ProyectoFinal
             // 
             // txtIdPatient
             // 
-            this.txtIdPatient.Location = new System.Drawing.Point(227, 102);
+            this.txtIdPatient.Location = new System.Drawing.Point(227, 61);
             this.txtIdPatient.Multiline = true;
             this.txtIdPatient.Name = "txtIdPatient";
             this.txtIdPatient.Size = new System.Drawing.Size(65, 22);
@@ -300,29 +325,12 @@ namespace ProyectoFinal
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(61, 101);
+            this.label2.Location = new System.Drawing.Point(61, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Patient :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtIdAppointment
-            // 
-            this.txtIdAppointment.Location = new System.Drawing.Point(227, 61);
-            this.txtIdAppointment.Multiline = true;
-            this.txtIdAppointment.Name = "txtIdAppointment";
-            this.txtIdAppointment.Size = new System.Drawing.Size(65, 22);
-            this.txtIdAppointment.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(61, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID appointment :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox1
             // 
@@ -349,6 +357,14 @@ namespace ProyectoFinal
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Print Appointment";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(188, 151);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(142, 35);
+            this.dateTimePicker2.TabIndex = 14;
             // 
             // textBox1
             // 
@@ -463,10 +479,10 @@ namespace ProyectoFinal
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(940, 497);
+            this.tabPage2.Size = new System.Drawing.Size(940, 494);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create Cubicle";
             // 
@@ -498,7 +514,6 @@ namespace ProyectoFinal
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel3.SetColumnSpan(this.groupBox2, 6);
-            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.txtCreateIdEmployee);
@@ -509,7 +524,6 @@ namespace ProyectoFinal
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtCreateAddresCubicle);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(80, 146);
             this.groupBox2.Name = "groupBox2";
@@ -518,15 +532,6 @@ namespace ProyectoFinal
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create Cubicle";
-            // 
-            // label17
-            // 
-            this.label17.Location = new System.Drawing.Point(31, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(138, 23);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "ID Cubicle :";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
             // 
@@ -549,6 +554,7 @@ namespace ProyectoFinal
             this.button4.Size = new System.Drawing.Size(88, 45);
             this.button4.TabIndex = 10;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtCreateIdEmployee
             // 
@@ -603,7 +609,7 @@ namespace ProyectoFinal
             // 
             // txtCreateAddresCubicle
             // 
-            this.txtCreateAddresCubicle.Location = new System.Drawing.Point(175, 139);
+            this.txtCreateAddresCubicle.Location = new System.Drawing.Point(175, 51);
             this.txtCreateAddresCubicle.Multiline = true;
             this.txtCreateAddresCubicle.Name = "txtCreateAddresCubicle";
             this.txtCreateAddresCubicle.Size = new System.Drawing.Size(100, 22);
@@ -611,29 +617,21 @@ namespace ProyectoFinal
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(48, 142);
+            this.label13.Location = new System.Drawing.Point(58, 50);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(121, 23);
             this.label13.TabIndex = 2;
             this.label13.Text = "Addres :";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(175, 51);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
             this.tabPage3.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(940, 497);
+            this.tabPage3.Size = new System.Drawing.Size(940, 494);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Appointment";
             // 
@@ -795,18 +793,21 @@ namespace ProyectoFinal
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
             this.createUserToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.createUserToolStripMenuItem.Text = "Create Patient";
+            this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
             // createAppointmentToolStripMenuItem
             // 
             this.createAppointmentToolStripMenuItem.Name = "createAppointmentToolStripMenuItem";
             this.createAppointmentToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.createAppointmentToolStripMenuItem.Text = "Create Cubicle";
+            this.createAppointmentToolStripMenuItem.Click += new System.EventHandler(this.createAppointmentToolStripMenuItem_Click);
             // 
             // createAppointmentToolStripMenuItem1
             // 
             this.createAppointmentToolStripMenuItem1.Name = "createAppointmentToolStripMenuItem1";
             this.createAppointmentToolStripMenuItem1.Size = new System.Drawing.Size(246, 26);
             this.createAppointmentToolStripMenuItem1.Text = "Create Appointment";
+            this.createAppointmentToolStripMenuItem1.Click += new System.EventHandler(this.createAppointmentToolStripMenuItem1_Click);
             // 
             // appointmentToolStripMenuItem
             // 
@@ -850,22 +851,6 @@ namespace ProyectoFinal
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(470, 56);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(142, 35);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(188, 151);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(142, 35);
-            this.dateTimePicker2.TabIndex = 14;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -879,6 +864,7 @@ namespace ProyectoFinal
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -903,6 +889,10 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
 
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
 
@@ -932,8 +922,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
         private System.Windows.Forms.TabPage tabPage3;
-
-        private System.Windows.Forms.Label label17;
 
         private System.Windows.Forms.Label label16;
 
@@ -970,17 +958,13 @@ namespace ProyectoFinal
         private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Label label3;
 
-        private System.Windows.Forms.TextBox txtIdAppointment;
         private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.TextBox textBox1;
-
-        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.GroupBox grbCreateAppointment;
 
