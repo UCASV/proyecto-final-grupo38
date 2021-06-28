@@ -47,10 +47,10 @@ namespace ProyectoFinal
 
                 int type = cmbType.Text.Trim() switch
                 {
-                    "Vacunador" => 2,
+                    "Vaccinator" => 2,
                     "Supervisor" => 3,
-                    "Organizador" => 4,
-                    "Conductor" => 5,
+                    "Organizer" => 4,
+                    "Driver" => 5,
                     _ => 1
                 };
 

@@ -168,12 +168,12 @@ namespace ProyectoFinal
             // cmbType
             // 
             this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {"Gestor", "Vacunador", "Supervisor", "Organizador", "Conductor"});
+            this.cmbType.Items.AddRange(new object[] {"Manager", "Vaccinator", "Supervisor", "Organizer", "Driver "});
             this.cmbType.Location = new System.Drawing.Point(185, 168);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(160, 30);
             this.cmbType.TabIndex = 12;
-            this.cmbType.Text = "Gestor";
+            this.cmbType.Text = "Manager";
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
             // txtEmail

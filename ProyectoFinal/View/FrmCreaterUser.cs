@@ -52,12 +52,12 @@ namespace ProyectoFinal
                 
                 var identifier = CmbIdentifier.Text.Trim() switch
                 {
-                    "Educación" => "ED948",
-                    "Salud" => "SA324",
-                    "Policía nacional civil" => "PNC21",
-                    "Gobierno" => "G0001",
-                    "Fuerza armada" => "FA234",
-                    "Periodismo" => "P2834",
+                    "Education" => "ED948",
+                    "Health" => "SA324",
+                    "Civil national police" => "PNC21",
+                    "government" => "G0001",
+                    "Armed force" => "FA234",
+                    "Journalism" => "P2834",
                     _ => "00000"
                 };
                 // Create new Citizen instance
