@@ -205,6 +205,7 @@ namespace ProyectoFinal
             this.txtPassword.Location = new System.Drawing.Point(185, 123);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(160, 26);
             this.txtPassword.TabIndex = 7;
             // 
