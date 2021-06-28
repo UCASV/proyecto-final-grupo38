@@ -23,9 +23,10 @@ namespace ProyectoFinal.VaccinationDB
         public virtual DbSet<CitizenxEmployee> CitizenxEmployees { get; set; }
         public virtual DbSet<Disease> Diseases { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeType> EmployeeTypes { get; set; }
+        public virtual DbSet<Identifier> Identifiers { get; set; }
         public virtual DbSet<Registry> Registries { get; set; }
         public virtual DbSet<SideEffect> SideEffects { get; set; }
-        public virtual DbSet<Type> Types { get; set; }
         public virtual DbSet<Vaccine> Vaccines { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -72,13 +73,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.DuiCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__APPOINTME__dui_c__4AB81AF0");
+                    .HasConstraintName("FK__APPOINTME__dui_c__412EB0B6");
 
                 entity.HasOne(d => d.IdCabinNavigation)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdCabin)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__APPOINTME__id_ca__4BAC3F29");
+                    .HasConstraintName("FK__APPOINTME__id_ca__4222D4EF");
             });
 
             modelBuilder.Entity<Cabin>(entity =>
@@ -116,13 +117,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Cabins)
                     .HasForeignKey(d => d.IdentifierEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CABIN__identifie__398D8EEE");
+                    .HasConstraintName("FK__CABIN__identifie__3B75D760");
             });
 
             modelBuilder.Entity<Citizen>(entity =>
             {
                 entity.HasKey(e => e.Dui)
-                    .HasName("PK__CITIZEN__D876F1BEB40AC4FB");
+                    .HasName("PK__CITIZEN__D876F1BEAF8DF95E");
 
                 entity.ToTable("CITIZEN");
 
@@ -149,10 +150,7 @@ namespace ProyectoFinal.VaccinationDB
                     .IsUnicode(false)
                     .HasColumnName("fullName");
 
-                entity.Property(e => e.Identifier)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("identifier");
+                entity.Property(e => e.IdIdentifer).HasColumnName("id_identifer");
 
                 entity.Property(e => e.Phone)
                     .IsRequired()
@@ -165,7 +163,7 @@ namespace ProyectoFinal.VaccinationDB
             modelBuilder.Entity<CitizenxEmployee>(entity =>
             {
                 entity.HasKey(e => new { e.DuiCitizen, e.IdentifierEmployee })
-                    .HasName("PK__CITIZENx__EBF723AC00FCA4A8");
+                    .HasName("PK__CITIZENx__EBF723ACB4B502C1");
 
                 entity.ToTable("CITIZENxEMPLOYEE");
 
@@ -184,13 +182,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.CitizenxEmployees)
                     .HasForeignKey(d => d.DuiCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZENxE__dui_c__3D5E1FD2");
+                    .HasConstraintName("FK__CITIZENxE__dui_c__3F466844");
 
                 entity.HasOne(d => d.IdentifierEmployeeNavigation)
                     .WithMany(p => p.CitizenxEmployees)
                     .HasForeignKey(d => d.IdentifierEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZENxE__ident__3E52440B");
+                    .HasConstraintName("FK__CITIZENxE__ident__403A8C7D");
             });
 
             modelBuilder.Entity<Disease>(entity =>
@@ -215,13 +213,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Diseases)
                     .HasForeignKey(d => d.DuiCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__DISEASE__dui_cit__35BCFE0A");
+                    .HasConstraintName("FK__DISEASE__dui_cit__37A5467C");
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.HasKey(e => e.Identifier)
-                    .HasName("PK__EMPLOYEE__D112ED49F41CD709");
+                    .HasName("PK__EMPLOYEE__D112ED496F7386C7");
 
                 entity.ToTable("EMPLOYEE");
 
@@ -264,7 +262,33 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdType)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__EMPLOYEE__id_typ__3A81B327");
+                    .HasConstraintName("FK__EMPLOYEE__id_typ__3C69FB99");
+            });
+
+            modelBuilder.Entity<EmployeeType>(entity =>
+            {
+                entity.ToTable("EMPLOYEE_TYPE");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Type)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("type");
+            });
+
+            modelBuilder.Entity<Identifier>(entity =>
+            {
+                entity.ToTable("IDENTIFIER");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Identifier1)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("identifier");
             });
 
             modelBuilder.Entity<Registry>(entity =>
@@ -298,13 +322,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Registries)
                     .HasForeignKey(d => d.IdCabin)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__REGISTRY__id_cab__3C69FB99");
+                    .HasConstraintName("FK__REGISTRY__id_cab__3E52440B");
 
                 entity.HasOne(d => d.IdentifierEmployeeNavigation)
                     .WithMany(p => p.Registries)
                     .HasForeignKey(d => d.IdentifierEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__REGISTRY__identi__3B75D760");
+                    .HasConstraintName("FK__REGISTRY__identi__3D5E1FD2");
             });
 
             modelBuilder.Entity<SideEffect>(entity =>
@@ -324,20 +348,7 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.SideEffects)
                     .HasForeignKey(d => d.IdVaccine)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__SIDE_EFFE__id_va__38996AB5");
-            });
-
-            modelBuilder.Entity<Type>(entity =>
-            {
-                entity.ToTable("TYPE");
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.Type1)
-                    .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false)
-                    .HasColumnName("type");
+                    .HasConstraintName("FK__SIDE_EFFE__id_va__3A81B327");
             });
 
             modelBuilder.Entity<Vaccine>(entity =>
@@ -375,13 +386,13 @@ namespace ProyectoFinal.VaccinationDB
                     .WithMany(p => p.Vaccines)
                     .HasForeignKey(d => d.DuiCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINE__dui_cit__36B12243");
+                    .HasConstraintName("FK__VACCINE__dui_cit__38996AB5");
 
                 entity.HasOne(d => d.IdentifierEmployeeNavigation)
                     .WithMany(p => p.Vaccines)
                     .HasForeignKey(d => d.IdentifierEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINE__identif__37A5467C");
+                    .HasConstraintName("FK__VACCINE__identif__398D8EEE");
             });
 
             OnModelCreatingPartial(modelBuilder);

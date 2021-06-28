@@ -68,7 +68,6 @@ namespace ProyectoFinal
                     Address = address.Trim(),
                     Phone = phone.Trim(),
                     Email = email.Trim(),
-                    Identifier = identifier
                 };
             
                 using (var db = new VaccinationDBContext())
