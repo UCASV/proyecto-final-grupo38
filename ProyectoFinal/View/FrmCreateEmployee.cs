@@ -46,15 +46,6 @@ namespace ProyectoFinal
 
                 var finalString = new String(stringChars);
 
-                int type = cmbType.Text.Trim() switch
-                {
-                    "Vaccinator" => 2,
-                    "Supervisor" => 3,
-                    "Organizer" => 4,
-                    "Driver" => 5,
-                    _ => 1
-                };
-
                 var username = txtUsername.Text.Trim();
                 var pass = txtPassword.Text.Trim();
                 if (txtUsername.Text.Trim() == "")
@@ -70,11 +61,10 @@ namespace ProyectoFinal
                         Identifier = finalString,
                         Username = username,
                         Password = pass,
-                        IdType = type,
+                        IdType = Convert.ToInt32(cmbType.SelectedValue),
                         FullName = txtName.Text.Trim(),
                         Address = TxtAddres.Text.Trim(),
                         Email = txtEmail.Text.Trim()
-
                     };
                     // Save into DB
                     db.Add(Employee);

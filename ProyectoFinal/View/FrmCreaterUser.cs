@@ -49,17 +49,6 @@ namespace ProyectoFinal
 
             if (validData)
             {
-                
-                var identifier = CmbIdentifier.Text.Trim() switch
-                {
-                    "Education" => "ED948",
-                    "Health" => "SA324",
-                    "Civil national police" => "PNC21",
-                    "government" => "G0001",
-                    "Armed force" => "FA234",
-                    "Journalism" => "P2834",
-                    _ => "00000"
-                };
                 // Create new Citizen instance
                 var citizen = new Citizen
                 {
@@ -68,6 +57,7 @@ namespace ProyectoFinal
                     Address = address.Trim(),
                     Phone = phone.Trim(),
                     Email = email.Trim(),
+                    IdIdentifer = Convert.ToInt32(CmbIdentifier.SelectedValue)
                 };
             
                 using (var db = new VaccinationDBContext())
