@@ -49,6 +49,17 @@ namespace ProyectoFinal
 
             if (validData)
             {
+                
+                var identifier = CmbIdentifier.Text.Trim() switch
+                {
+                    "Educación" => "ED948",
+                    "Salud" => "SA324",
+                    "Policía nacional civil" => "PNC21",
+                    "Gobierno" => "G0001",
+                    "Fuerza armada" => "FA234",
+                    "Periodismo" => "P2834",
+                    _ => "00000"
+                };
                 // Create new Citizen instance
                 var citizen = new Citizen
                 {
@@ -57,7 +68,7 @@ namespace ProyectoFinal
                     Address = address.Trim(),
                     Phone = phone.Trim(),
                     Email = email.Trim(),
-                    Identifier = txtId.Text
+                    Identifier = identifier
                 };
             
                 using (var db = new VaccinationDBContext())
@@ -176,7 +187,7 @@ namespace ProyectoFinal
             ttpForm.SetToolTip(txtPhone, "You must fill out this field in order to register. Only numbers allowed. ");
             ttpForm.SetToolTip(txtFullName, "You must fill out this field in order to register.");
             ttpForm.SetToolTip(txtEmail, "This field is optional.");
-            ttpForm.SetToolTip(txtId, "This field is optional.");
+            ttpForm.SetToolTip(CmbIdentifier, "This field is optional.");
             ttpForm.SetToolTip(txtDisease, "This field is optional.");
         }
     }

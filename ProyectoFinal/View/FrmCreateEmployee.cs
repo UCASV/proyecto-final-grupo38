@@ -16,8 +16,8 @@ namespace ProyectoFinal
         private void button2_Click(object sender, EventArgs e)
         {
             var validations = new Validations();
-            if (!validations.ValidateEmpty(txtEmail.Text.Trim()) || !validations.ValidateEmpty(txtName.Text.Trim()) || !validations.ValidateEmpty(TxtAddres.Text.Trim()) 
-                || !validations.ValidateEmpty(txtUsername.Text) || !validations.ValidateEmpty(txtPassword.Text))
+            if (!validations.ValidateEmpty(txtEmail.Text.Trim()) || !validations.ValidateEmpty(txtName.Text.Trim())
+                                                                 || !validations.ValidateEmpty(TxtAddres.Text.Trim()))
             {
                 MessageBox.Show("Blank spaces are not allowed", "Employee Registration",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);

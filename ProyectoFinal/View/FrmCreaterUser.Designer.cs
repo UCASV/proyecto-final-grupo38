@@ -39,6 +39,7 @@ namespace ProyectoFinal
             this.BtnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.CmbIdentifier = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.gbDiseaseQuestion = new System.Windows.Forms.GroupBox();
@@ -46,7 +47,6 @@ namespace ProyectoFinal
             this.radYes = new System.Windows.Forms.RadioButton();
             this.btnAddDisease = new System.Windows.Forms.Button();
             this.txtDisease = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -155,12 +155,12 @@ namespace ProyectoFinal
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tlpCreateUser.SetColumnSpan(this.groupBox, 6);
+            this.groupBox.Controls.Add(this.CmbIdentifier);
             this.groupBox.Controls.Add(this.label11);
             this.groupBox.Controls.Add(this.label10);
             this.groupBox.Controls.Add(this.gbDiseaseQuestion);
             this.groupBox.Controls.Add(this.btnAddDisease);
             this.groupBox.Controls.Add(this.txtDisease);
-            this.groupBox.Controls.Add(this.txtId);
             this.groupBox.Controls.Add(this.txtEmail);
             this.groupBox.Controls.Add(this.txtPhone);
             this.groupBox.Controls.Add(this.txtAddress);
@@ -182,6 +182,16 @@ namespace ProyectoFinal
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Create User";
+            // 
+            // CmbIdentifier
+            // 
+            this.CmbIdentifier.FormattingEnabled = true;
+            this.CmbIdentifier.Items.AddRange(new object[] {"Ninguno", "Educación", "Salud", "Policía nacional civil", "Gobierno", "Fuerza armada", "Periodismo"});
+            this.CmbIdentifier.Location = new System.Drawing.Point(182, 219);
+            this.CmbIdentifier.Name = "CmbIdentifier";
+            this.CmbIdentifier.Size = new System.Drawing.Size(159, 30);
+            this.CmbIdentifier.TabIndex = 26;
+            this.CmbIdentifier.Text = "Ninguno";
             // 
             // label11
             // 
@@ -218,6 +228,7 @@ namespace ProyectoFinal
             // 
             // radNo
             // 
+            this.radNo.Checked = true;
             this.radNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radNo.Location = new System.Drawing.Point(214, 27);
             this.radNo.Name = "radNo";
@@ -234,7 +245,6 @@ namespace ProyectoFinal
             this.radYes.Name = "radYes";
             this.radYes.Size = new System.Drawing.Size(103, 24);
             this.radYes.TabIndex = 0;
-            this.radYes.TabStop = true;
             this.radYes.Text = "Yes";
             this.radYes.UseVisualStyleBackColor = true;
             this.radYes.CheckedChanged += new System.EventHandler(this.radYes_CheckedChanged);
@@ -260,14 +270,6 @@ namespace ProyectoFinal
             this.txtDisease.ReadOnly = true;
             this.txtDisease.Size = new System.Drawing.Size(262, 26);
             this.txtDisease.TabIndex = 19;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(182, 219);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(159, 26);
-            this.txtId.TabIndex = 18;
             // 
             // txtEmail
             // 
@@ -428,6 +430,10 @@ namespace ProyectoFinal
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.ComboBox CmbIdentifier;
+
+        private System.Windows.Forms.ComboBox comboBox1;
+
         private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Label label10;
@@ -452,8 +458,6 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.GroupBox groupBox1;
 
-        private System.Windows.Forms.TextBox txtId;
-        
         private System.Windows.Forms.TextBox txtFullName;
         
         private System.Windows.Forms.TextBox txtPhone;
