@@ -179,5 +179,10 @@ namespace ProyectoFinal
             btnAddDisease.Enabled = false;
             txtDisease.Clear();
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
