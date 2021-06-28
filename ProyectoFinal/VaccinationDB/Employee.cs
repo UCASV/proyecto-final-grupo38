@@ -23,7 +23,7 @@ namespace ProyectoFinal.VaccinationDB
         public string Email { get; set; }
         public int IdType { get; set; }
 
-        public virtual Type IdTypeNavigation { get; set; }
+        public virtual EmployeeType IdTypeNavigation { get; set; }
         public virtual ICollection<Cabin> Cabins { get; set; }
         public virtual ICollection<CitizenxEmployee> CitizenxEmployees { get; set; }
         public virtual ICollection<Registry> Registries { get; set; }

@@ -20,7 +20,7 @@ namespace ProyectoFinal.VaccinationDB
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string Identifier { get; set; }
+        public int IdIdentifer { get; set; }
 
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<CitizenxEmployee> CitizenxEmployees { get; set; }
