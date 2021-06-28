@@ -186,12 +186,12 @@ namespace ProyectoFinal
             // CmbIdentifier
             // 
             this.CmbIdentifier.FormattingEnabled = true;
-            this.CmbIdentifier.Items.AddRange(new object[] {"Ninguno", "Educación", "Salud", "Policía nacional civil", "Gobierno", "Fuerza armada", "Periodismo"});
+            this.CmbIdentifier.Items.AddRange(new object[] {"None", "Education", "Health", "Civil national police", "government", "Armed force", "Journalism "});
             this.CmbIdentifier.Location = new System.Drawing.Point(182, 219);
             this.CmbIdentifier.Name = "CmbIdentifier";
             this.CmbIdentifier.Size = new System.Drawing.Size(159, 30);
             this.CmbIdentifier.TabIndex = 26;
-            this.CmbIdentifier.Text = "Ninguno";
+            this.CmbIdentifier.Text = "None";
             // 
             // label11
             // 
