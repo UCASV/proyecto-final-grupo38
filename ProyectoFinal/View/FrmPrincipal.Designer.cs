@@ -32,6 +32,9 @@ namespace ProyectoFinal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -83,11 +86,6 @@ namespace ProyectoFinal
             this.BtnCreateCubicle = new System.Windows.Forms.Button();
             this.btnCreateAppointment = new System.Windows.Forms.Button();
             this.Dgv = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CubicleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Iduser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DayandHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dose = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -716,54 +714,39 @@ namespace ProyectoFinal
             // 
             this.Dgv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            this.Dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.ID, this.CubicleId, this.Iduser, this.DayandHour, this.Dose});
-            this.Dgv.GridColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv.EnableHeadersVisualStyles = false;
+            this.Dgv.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.Dgv.Location = new System.Drawing.Point(74, 34);
             this.Dgv.Name = "Dgv";
+            this.Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv.RowTemplate.Height = 24;
+            this.Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv.Size = new System.Drawing.Size(671, 227);
-            this.Dgv.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ID.HeaderText = "Appointment ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 150;
-            // 
-            // CubicleId
-            // 
-            this.CubicleId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.CubicleId.HeaderText = "Cubicle ID";
-            this.CubicleId.Name = "CubicleId";
-            this.CubicleId.ReadOnly = true;
-            this.CubicleId.Width = 110;
-            // 
-            // Iduser
-            // 
-            this.Iduser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Iduser.HeaderText = "Patient ID";
-            this.Iduser.Name = "Iduser";
-            this.Iduser.ReadOnly = true;
-            this.Iduser.Width = 108;
-            // 
-            // DayandHour
-            // 
-            this.DayandHour.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.DayandHour.HeaderText = "Day and Hour";
-            this.DayandHour.Name = "DayandHour";
-            this.DayandHour.ReadOnly = true;
-            this.DayandHour.Width = 136;
-            // 
-            // Dose
-            // 
-            this.Dose.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Dose.HeaderText = "Dose";
-            this.Dose.Name = "Dose";
-            this.Dose.ReadOnly = true;
-            this.Dose.Width = 77;
+            this.Dgv.TabIndex = 4;
             // 
             // menuStrip1
             // 
@@ -909,14 +892,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.Button btnCreateAppointment;
 
         private System.Windows.Forms.DataGridView Dgv;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn CubicleId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DayandHour;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dose;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn Iduser;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
 
         private System.Windows.Forms.DataGridView dataGridView1;
 

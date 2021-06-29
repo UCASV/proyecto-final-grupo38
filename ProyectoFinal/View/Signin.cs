@@ -50,7 +50,7 @@ namespace ProyectoFinal
             {
                 // Check on db if user exists
                 // If exists check password
-                var db = new VaccinationDBContext(/*userResult[0] */);
+                var db = new VaccinationDBContext();
                 List<Employee> users = db.Employees
                     .Include(u => u.Vaccines).ToList();
                     
