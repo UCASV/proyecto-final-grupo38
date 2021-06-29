@@ -434,8 +434,6 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.ComboBox CmbIdentifier;
 
-        private System.Windows.Forms.ComboBox comboBox1;
-
         private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Label label10;
@@ -449,16 +447,7 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.RadioButton radYes;
 
-        private System.Windows.Forms.RadioButton radNel;
-
-        private System.Windows.Forms.RadioButton radSi;
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-
         private System.Windows.Forms.GroupBox gbDiseaseQuestion;
-
-        private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.TextBox txtFullName;
         
@@ -474,8 +463,6 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.Label label9;
 
-        private System.Windows.Forms.Button btnReg;
-        
         private System.Windows.Forms.Label label8;
 
         private System.Windows.Forms.Label label5;
@@ -495,8 +482,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.Button BtnBack;
 
         private System.Windows.Forms.Label label2;
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
     }

@@ -324,10 +324,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.ComboBox cmbType;
 
-        private System.Windows.Forms.Label label9;
-
-        private System.Windows.Forms.ComboBox comboBox1;
-
         private System.Windows.Forms.Label label8;
 
         private System.Windows.Forms.Button button2;
@@ -339,7 +335,6 @@ namespace ProyectoFinal
         private System.Windows.Forms.TextBox txtEmail;
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

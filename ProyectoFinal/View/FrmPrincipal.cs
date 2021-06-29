@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using ProyectoFinal.Services;
 using ProyectoFinal.VaccinationDB;
+using iTextSharp.text.pdf;
+using System.IO;
+using iTextSharp.text;
+
 
 namespace ProyectoFinal
 {
@@ -15,7 +20,7 @@ namespace ProyectoFinal
         private System.Windows.Forms.TextBox txtDose;
         private System.Windows.Forms.TextBox txtIdPatient;
         private Label label6;
-        private Button button3;
+        private System.Windows.Forms.Button button3;
         private Label label9;
         private TextBox textBox7;
         private Label label10;
@@ -277,5 +282,108 @@ namespace ProyectoFinal
             Dgv.Columns["DuiCitizenNavigation"].Visible = false;
             Dgv.Columns["IdCabinNavigation"].Visible = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (Dgv.RowCount == 0)
+            { 
+                MessageBox.Show("There no data!");
+            }
+            else
+            {    //Guardando ruta del Pdf
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = save.FileName; 
+                    Document doc = new Document(PageSize.A3, 9, 9, 9, 9);
+                    Chunk encab = new Chunk("REPORT", FontFactory.GetFont("COURIER", 18));
+                    try
+                    {
+                        FileStream file = new FileStream(filename, FileMode.OpenOrCreate);
+                        PdfWriter writer = PdfWriter.GetInstance(doc, file);
+                        writer.ViewerPreferences = PdfWriter.PageModeUseThumbs;
+                        writer.ViewerPreferences = PdfWriter.PageLayoutOneColumn;
+                        doc.Open();
+
+                        doc.Add(new Paragraph(encab));
+                        GenerDoc(doc);
+
+                        Process.Start(filename);
+                        doc.Close();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+        public void GenerDoc(Document document)
+       {
+           //se crea un objeto PdfTable con el numero de columnas del dataGridView 
+           PdfPTable datatable = new PdfPTable(Dgv.ColumnCount);
+
+           //asignamos algunas propiedades para el diseño del pdf 
+           datatable.DefaultCell.Padding = 1;
+           float[] headerwidths = GetTamañoColumnas(Dgv);
+
+           datatable.SetWidths(headerwidths);
+           datatable.WidthPercentage = 100;
+           datatable.DefaultCell.BorderWidth = 1;
+
+           //definir color
+           datatable.DefaultCell.BackgroundColor = iTextSharp.text.BaseColor.WHITE;
+
+          //definimos color de bordes
+           datatable.DefaultCell.BorderColor = iTextSharp.text.BaseColor.BLACK;
+
+         // definimos la fuente
+           iTextSharp.text.Font fuente = new   iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA);
+
+           Phrase objP = new Phrase("A", fuente);
+
+           datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+           //Se genera el emcabezado del pdf
+           for (int i = 0; i < Dgv.ColumnCount; i++)
+           {
+
+               objP = new Phrase(Dgv.Columns[i].HeaderText, fuente);
+               datatable.HorizontalAlignment = Element.ALIGN_CENTER;
+
+               datatable.AddCell(objP);
+
+           }
+           datatable.HeaderRows = 2;
+
+           datatable.DefaultCell.BorderWidth = 1;
+
+           //Se genere al pdf
+           for (int i = 0; i < Dgv.RowCount; i++)
+           {
+               for (int j = 0; j < Dgv.ColumnCount; j++)
+               {
+                   objP = new Phrase(Dgv[j, i].Value.ToString(), fuente);
+                   datatable.AddCell(objP);
+               }
+               datatable.CompleteRow();
+           }
+           document.Add(datatable);
+       }
+
+       //Función que obtiene los tamaños de las columnas del datagridview
+       public float[] GetTamañoColumnas(DataGridView dg)
+       {
+           //Tomamos el numero de columnas
+           float[] values = new float[dg.ColumnCount];
+           for (int i = 0; i < dg.ColumnCount; i++)
+           {
+               //Tomamos el ancho de cada columna
+               values[i] = (float)dg.Columns[i].Width;
+           }
+           return values;
+       }
     }
 }

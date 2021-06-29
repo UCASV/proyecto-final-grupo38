@@ -265,22 +265,13 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.Label label6;
 
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.TextBox textBox3;
-
         private System.Windows.Forms.Label label4;
-
-        private System.Windows.Forms.TextBox textBox2;
 
         private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.GroupBox GroupBox;
-
-        private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.Label label1;
 

@@ -40,6 +40,7 @@ namespace ProyectoFinal
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.grbCreateAppointment = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -95,7 +96,6 @@ namespace ProyectoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -234,6 +234,16 @@ namespace ProyectoFinal
             this.grbCreateAppointment.TabIndex = 0;
             this.grbCreateAppointment.TabStop = false;
             this.grbCreateAppointment.Text = "Create Appointment";
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Yu Gothic", 4.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label17.Location = new System.Drawing.Point(172, 38);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 22);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "Use only numbers";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -416,6 +426,7 @@ namespace ProyectoFinal
             this.button3.TabIndex = 9;
             this.button3.Text = "Print";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtPatientName
             // 
@@ -849,16 +860,6 @@ namespace ProyectoFinal
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Yu Gothic", 4.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label17.Location = new System.Drawing.Point(172, 38);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(139, 22);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "Use only numbers";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -920,8 +921,6 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.DataGridView Dgv;
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-
         private System.Windows.Forms.GroupBox groupBox3;
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -954,11 +953,8 @@ namespace ProyectoFinal
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
 
         private System.Windows.Forms.ToolStripMenuItem createAppointmentToolStripMenuItem1;
-
-        private System.Windows.Forms.TextBox textBox3;
 
         private System.Windows.Forms.Label label5;
 
