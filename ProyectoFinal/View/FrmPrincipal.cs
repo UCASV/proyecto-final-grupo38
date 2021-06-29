@@ -189,7 +189,9 @@ namespace ProyectoFinal
                 .Where(u => u.Dui == dui)
                 .ToList();
 
+
             return citizenResult.Count > 0;
+
         }
         
         
