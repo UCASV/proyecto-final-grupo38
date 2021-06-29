@@ -34,7 +34,6 @@ namespace ProyectoFinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -82,6 +81,7 @@ namespace ProyectoFinal
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.BtnCreateCubicle = new System.Windows.Forms.Button();
             this.btnCreateAppointment = new System.Windows.Forms.Button();
@@ -664,6 +664,7 @@ namespace ProyectoFinal
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel4.SetColumnSpan(this.groupBox3, 6);
+            this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.BtnCreateCubicle);
             this.groupBox3.Controls.Add(this.btnCreateAppointment);
@@ -677,38 +678,53 @@ namespace ProyectoFinal
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Appointment";
             // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(74, 323);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(671, 32);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Refresh";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(551, 297);
+            this.button5.Location = new System.Drawing.Point(551, 276);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(194, 32);
             this.button5.TabIndex = 3;
             this.button5.Text = "Create Patient";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // BtnCreateCubicle
             // 
             this.BtnCreateCubicle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCreateCubicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCreateCubicle.Location = new System.Drawing.Point(312, 297);
+            this.BtnCreateCubicle.Location = new System.Drawing.Point(313, 276);
             this.BtnCreateCubicle.Name = "BtnCreateCubicle";
             this.BtnCreateCubicle.Size = new System.Drawing.Size(194, 32);
             this.BtnCreateCubicle.TabIndex = 2;
             this.BtnCreateCubicle.Text = "Create Cubicle";
             this.BtnCreateCubicle.UseVisualStyleBackColor = true;
+            this.BtnCreateCubicle.Click += new System.EventHandler(this.BtnCreateCubicle_Click);
             // 
             // btnCreateAppointment
             // 
             this.btnCreateAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateAppointment.Location = new System.Drawing.Point(74, 297);
+            this.btnCreateAppointment.Location = new System.Drawing.Point(74, 276);
             this.btnCreateAppointment.Name = "btnCreateAppointment";
             this.btnCreateAppointment.Size = new System.Drawing.Size(194, 32);
             this.btnCreateAppointment.TabIndex = 1;
             this.btnCreateAppointment.Text = "Create Appointment";
             this.btnCreateAppointment.UseVisualStyleBackColor = true;
+            this.btnCreateAppointment.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
             // Dgv
             // 
@@ -717,32 +733,24 @@ namespace ProyectoFinal
             this.Dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv.EnableHeadersVisualStyles = false;
             this.Dgv.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.Dgv.Location = new System.Drawing.Point(74, 34);
             this.Dgv.Name = "Dgv";
             this.Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (3)))), ((int) (((byte) (81)))), ((int) (((byte) (116)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv.RowTemplate.Height = 24;
             this.Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv.Size = new System.Drawing.Size(671, 227);
@@ -772,7 +780,6 @@ namespace ProyectoFinal
             this.newPatientToolStripMenuItem.Size = new System.Drawing.Size(149, 28);
             this.newPatientToolStripMenuItem.Text = "Create";
             this.newPatientToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.newPatientToolStripMenuItem.Click += new System.EventHandler(this.newPatientToolStripMenuItem_Click);
             // 
             // createUserToolStripMenuItem
             // 
@@ -850,6 +857,7 @@ namespace ProyectoFinal
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -875,6 +883,8 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button6;
 
         private System.Windows.Forms.Label label1;
 

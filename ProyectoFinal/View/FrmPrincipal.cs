@@ -25,11 +25,7 @@ namespace ProyectoFinal
         {
             InitializeComponent();
         }
-
-        private void newPatientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -229,6 +225,43 @@ namespace ProyectoFinal
                 
                 return false;
             }
+        }
+
+        private void btnCreateAppointment_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Visible = true;
+        }
+
+        private void BtnCreateCubicle_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            tabControl1.Visible = true;
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // Cerrando la aplicacion cuando se cierre el form
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmCreaterUser window = new FrmCreaterUser();
+            window.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var db2 = new VaccinationDBContext();
+            // cargando la lista de las citas si el usuario 
+            var appointments = db2.Appointments
+                .Include(i => i.DuiCitizenNavigation).ToList();
+            
+            Dgv.DataSource = null;
+            Dgv.DataSource = appointments;
+            
+            Dgv.Columns["DuiCitizenNavigation"].Visible = false;
+            Dgv.Columns["IdCabinNavigation"].Visible = false;
         }
     }
 }
