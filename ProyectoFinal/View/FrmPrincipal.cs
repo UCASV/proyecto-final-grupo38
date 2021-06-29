@@ -175,9 +175,6 @@ namespace ProyectoFinal
             }
             else // If user doesn't exist 
             {
-                MessageBox.Show("There are no users matching this DUI!", "El Salvador's Vaccination - Add Medical Condition",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
                 return false;
             }
         }
