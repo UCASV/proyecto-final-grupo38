@@ -95,6 +95,7 @@ namespace ProyectoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -213,6 +214,7 @@ namespace ProyectoFinal
             // 
             this.grbCreateAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.SetColumnSpan(this.grbCreateAppointment, 6);
+            this.grbCreateAppointment.Controls.Add(this.label17);
             this.grbCreateAppointment.Controls.Add(this.label1);
             this.grbCreateAppointment.Controls.Add(this.dateTimePicker3);
             this.grbCreateAppointment.Controls.Add(this.dateTimePicker1);
@@ -319,6 +321,7 @@ namespace ProyectoFinal
             // txtIdPatient
             // 
             this.txtIdPatient.Location = new System.Drawing.Point(172, 62);
+            this.txtIdPatient.MaxLength = 9;
             this.txtIdPatient.Multiline = true;
             this.txtIdPatient.Name = "txtIdPatient";
             this.txtIdPatient.Size = new System.Drawing.Size(139, 22);
@@ -846,6 +849,16 @@ namespace ProyectoFinal
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Yu Gothic", 4.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label17.Location = new System.Drawing.Point(172, 38);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 22);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "Use only numbers";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -885,6 +898,8 @@ namespace ProyectoFinal
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label17;
 
         private System.Windows.Forms.Button button6;
 

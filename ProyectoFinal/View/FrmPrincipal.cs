@@ -80,41 +80,62 @@ namespace ProyectoFinal
             TimeSpan start = new TimeSpan(06, 0, 0);
             TimeSpan end = new TimeSpan(18, 0, 0);
             TimeSpan now = dateTimePicker3.Value.TimeOfDay;
-            
-            if (!validations.ValidateEmpty(txtIdPatient.Text) || !validations.ValidateEmpty(txtIdCubicle.Text) 
+
+            if (!validations.ValidateEmpty(txtIdPatient.Text) || !validations.ValidateEmpty(txtIdCubicle.Text)
                                                               || !validations.ValidateEmpty(txtDose.Text))
             {
-                MessageBox.Show("Do not leave blank spaces please.", "Appointment creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Do not leave blank spaces please.", "Appointment creation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
             else if (dateTimePicker1.Value < DateTime.Today)
             {
-                MessageBox.Show("Incorrect date, check again.", "Appointment creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Incorrect date, check again.", "Appointment creation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
             else if (now < start || now > end)
             {
-                MessageBox.Show("Incorrect time, check again.", "Appointment creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Incorrect time, check again.", "Appointment creation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
-            else if (CheckCitizen(txtIdPatient.Text) || CheckCabin(Int32.Parse(txtIdCubicle.Text)))
+            else if (!CheckCabin(Int32.Parse(txtIdCubicle.Text)) || !validations.ValidateNumbersOnly(txtIdCubicle.Text))
             {
-                MessageBox.Show("Patient DUI or cabin ID are incorrect.", "Appointment creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cabin ID is incorrect.", "Appointment creation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            else if (!validations.ValidateNumbersOnly(txtIdPatient.Text))
+            {
+                MessageBox.Show("DUI format is incorrect.", "Appointment creation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
             else
             {
-                using (var db = new VaccinationDBContext())
+                var dui = txtIdPatient.Text.Insert(8, "-");
+                if (CheckCitizen(dui))
                 {
-                    var Appointment = new Appointment
+                    using (var db = new VaccinationDBContext())
                     {
-                        Date = dateTimePicker1.Value,
-                        Hour = dateTimePicker3.Value.TimeOfDay,
-                        IdCabin = Int32.Parse(txtIdCubicle.Text.Trim()),
-                        DuiCitizen= txtIdPatient.Text.Trim(),
-                        Dose = txtDose.Text.Trim()
-                    };
-                    // Save into DB
-                    db.Add(Appointment);
-                    db.SaveChanges();
+                        var Appointment = new Appointment
+                        {
+                            Date = dateTimePicker1.Value,
+                            Hour = dateTimePicker3.Value.TimeOfDay,
+                            IdCabin = Int32.Parse(txtIdCubicle.Text.Trim()),
+                            DuiCitizen = dui,
+                            Dose = txtDose.Text.Trim()
+                        };
+                        // Save into DB
+                        db.Add(Appointment);
+                        db.SaveChanges();
+                    }
+
+                    MessageBox.Show("Appointment created.", "Appointment creation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
-                MessageBox.Show("Appointment created.", "Appointment creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    MessageBox.Show("DUI might be wrong.", "Appointment creation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+
             }
         }
 
@@ -124,7 +145,7 @@ namespace ProyectoFinal
             
             if (!validations.ValidateEmail(txtCreateEmailCubicle.Text))
             {
-                MessageBox.Show("Mail format is incorrect.", "Cabin creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Wrong data, please check again.", "Cabin creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             else if (!validations.ValidateEmpty(txtCreateAddresCubicle.Text))
@@ -142,8 +163,7 @@ namespace ProyectoFinal
             else
             {
                 var db = new VaccinationDBContext();
-                
-                    var Cabin = new Cabin
+                var Cabin = new Cabin
                     {
                         Address = txtCreateAddresCubicle.Text.Trim(),
                         Phone = txtCreateNumerPhoneCubicle.Text.Trim(),
@@ -169,21 +189,17 @@ namespace ProyectoFinal
                 .Where(u => u.Dui == dui)
                 .ToList();
 
-            if (citizenResult.Count > 0) // If user exists
-            {
-                return true;
-            }
-            else // If user doesn't exist 
-            {
-                return false;
-            }
+
+            return citizenResult.Count > 0;
+
         }
+        
         
         private bool CheckCabin(int id)
         {
             var db = new VaccinationDBContext();
             List<Cabin> cabins = db.Cabins
-                .Include(c => c.Id).ToList();
+                .Include(c => c.Registries).ToList();
             
             List<Cabin> cabinResult = cabins
                 .Where(c => c.Id == id)
