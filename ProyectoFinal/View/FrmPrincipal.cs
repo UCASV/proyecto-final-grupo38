@@ -141,8 +141,8 @@ namespace ProyectoFinal
             }
             else
             {
-                using (var db = new VaccinationDBContext())
-                {
+                var db = new VaccinationDBContext();
+                
                     var Cabin = new Cabin
                     {
                         Address = txtCreateAddresCubicle.Text.Trim(),
@@ -153,8 +153,9 @@ namespace ProyectoFinal
                     // Save into DB
                     db.Add(Cabin);
                     db.SaveChanges();
+                    
                     MessageBox.Show("Cubicle created.", "Cubicle creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
         }
         
@@ -208,7 +209,7 @@ namespace ProyectoFinal
         {
             var db = new VaccinationDBContext();
             List<Employee> employees = db.Employees
-                .Include(e => e.Identifier).ToList();
+                .Include(e => e.Registries).ToList();
             
             List<Employee> employeeResult = employees
                 .Where(e => e.Identifier == id)
@@ -216,14 +217,14 @@ namespace ProyectoFinal
 
             if (employeeResult.Count > 0) // If user exists
             {
-                return true;
+                return false;
             }
             else // If user doesn't exist 
             {
                 MessageBox.Show("There are no users matching this DUI!", "El Salvador's Vaccination - Add Medical Condition",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
-                return false;
+                return true;
             }
         }
 

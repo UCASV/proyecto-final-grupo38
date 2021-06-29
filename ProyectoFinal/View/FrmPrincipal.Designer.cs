@@ -560,6 +560,7 @@ namespace ProyectoFinal
             // txtCreateIdEmployee
             // 
             this.txtCreateIdEmployee.Location = new System.Drawing.Point(175, 94);
+            this.txtCreateIdEmployee.MaxLength = 5;
             this.txtCreateIdEmployee.Multiline = true;
             this.txtCreateIdEmployee.Name = "txtCreateIdEmployee";
             this.txtCreateIdEmployee.Size = new System.Drawing.Size(100, 22);
@@ -594,6 +595,7 @@ namespace ProyectoFinal
             // txtCreateNumerPhoneCubicle
             // 
             this.txtCreateNumerPhoneCubicle.Location = new System.Drawing.Point(469, 90);
+            this.txtCreateNumerPhoneCubicle.MaxLength = 8;
             this.txtCreateNumerPhoneCubicle.Multiline = true;
             this.txtCreateNumerPhoneCubicle.Name = "txtCreateNumerPhoneCubicle";
             this.txtCreateNumerPhoneCubicle.Size = new System.Drawing.Size(131, 22);
