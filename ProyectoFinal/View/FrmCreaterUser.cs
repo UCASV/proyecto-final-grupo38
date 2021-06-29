@@ -84,6 +84,10 @@ namespace ProyectoFinal
                 {
                     // Create appointment
                 }
+                else
+                {   
+                    MessageBox.Show("Citizen does not enter priority group.\nMake an appointment later", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {

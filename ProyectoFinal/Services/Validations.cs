@@ -32,19 +32,10 @@ namespace ProyectoFinal.Services
 
         public bool ValidateCitizen(Citizen citizen)
         {
+            bool validForAppointment = citizen.IdIdentifer != 1 || checkDisease(citizen.Dui);
 
 
-            if (citizen.IdIdentifer != 1)
-            {
-                if (checkDisease(citizen.Dui))
-                {
-
-                }
-
-                return true;
-            }
-
-            return false;
+            return validForAppointment;
         }
 
         private bool checkDisease(string dui)
@@ -57,19 +48,7 @@ namespace ProyectoFinal.Services
                 .Where(d => d.DuiCitizen == dui)
                 .ToList();
 
-            if (diseaseResult.Count > 0) // If user exists
-            {
-                return true;
-            }
-            else // If user doesn't exist 
-            {
-                MessageBox.Show("There are no users matching this DUI!",
-                    "El Salvador's Vaccination - Add Medical Condition",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return false;
-
-            }
+            return diseaseResult.Count > 0;
         }
     }
 }
