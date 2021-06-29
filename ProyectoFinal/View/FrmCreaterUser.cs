@@ -79,6 +79,11 @@ namespace ProyectoFinal
                         MessageBox.Show("Citizen has already been registered", "Citizen Registration", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
+
+                if (validations.ValidateCitizen(citizen))
+                {
+                    // Create appointment
+                }
             }
             else
             {

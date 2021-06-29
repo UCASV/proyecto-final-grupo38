@@ -237,9 +237,9 @@ namespace ProyectoFinal
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(298, 106);
+            this.label1.Location = new System.Drawing.Point(317, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 23);
+            this.label1.Size = new System.Drawing.Size(147, 23);
             this.label1.TabIndex = 14;
             this.label1.Text = "Hour :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -256,21 +256,24 @@ namespace ProyectoFinal
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(470, 56);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2021, 6, 29, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(142, 35);
             this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 6, 29, 0, 0, 0, 0);
             // 
             // txtIdCubicle
             // 
-            this.txtIdCubicle.Location = new System.Drawing.Point(227, 103);
+            this.txtIdCubicle.Location = new System.Drawing.Point(172, 104);
             this.txtIdCubicle.Multiline = true;
             this.txtIdCubicle.Name = "txtIdCubicle";
-            this.txtIdCubicle.Size = new System.Drawing.Size(65, 22);
+            this.txtIdCubicle.Size = new System.Drawing.Size(139, 22);
             this.txtIdCubicle.TabIndex = 11;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(61, 102);
+            this.label5.Location = new System.Drawing.Point(6, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 22);
             this.label5.TabIndex = 10;
@@ -299,9 +302,9 @@ namespace ProyectoFinal
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(298, 60);
+            this.label4.Location = new System.Drawing.Point(317, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 23);
+            this.label4.Size = new System.Drawing.Size(147, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Date :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,19 +320,19 @@ namespace ProyectoFinal
             // 
             // txtIdPatient
             // 
-            this.txtIdPatient.Location = new System.Drawing.Point(227, 61);
+            this.txtIdPatient.Location = new System.Drawing.Point(172, 62);
             this.txtIdPatient.Multiline = true;
             this.txtIdPatient.Name = "txtIdPatient";
-            this.txtIdPatient.Size = new System.Drawing.Size(65, 22);
+            this.txtIdPatient.Size = new System.Drawing.Size(139, 22);
             this.txtIdPatient.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(61, 60);
+            this.label2.Location = new System.Drawing.Point(6, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 22);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ID Patient :";
+            this.label2.Text = "DUI Patient :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox1
