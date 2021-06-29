@@ -66,10 +66,13 @@ namespace ProyectoFinal
             var db2 = new VaccinationDBContext();
             // cargando la lista de las citas si el usuario no es nuevo
             var appointments = db2.Appointments
-                .Include(i => i.Date).ToList();
+                .Include(i => i.DuiCitizenNavigation).ToList();
             
             Dgv.DataSource = null;
             Dgv.DataSource = appointments;
+            
+            Dgv.Columns["DuiCitizenNavigation"].Visible = false;
+            Dgv.Columns["IdCabinNavigation"].Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)

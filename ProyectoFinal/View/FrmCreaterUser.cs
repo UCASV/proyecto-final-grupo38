@@ -85,6 +85,8 @@ namespace ProyectoFinal
                 MessageBox.Show("Incorrect data, check again please.", "Citizen register", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
+            this.Hide();
+            
         }
 
         private void btnAddDisease_Click(object sender, EventArgs e)
